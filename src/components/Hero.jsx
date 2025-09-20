@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+
 import nailPic1 from '../assets/images/nail-pic-1.png'
 import nailPic2 from '../assets/images/nail-pic-2.png'
 import nailPic3 from '../assets/images/nail-pic-3.png'
@@ -26,16 +26,16 @@ const Hero = () => {
       <div className="absolute top-0 right-0 w-96 h-96 bg-gradient-to-bl from-pink-50 to-transparent rounded-full blur-3xl opacity-30"></div>
       <div className="absolute bottom-0 left-0 w-80 h-80 bg-gradient-to-tr from-orange-50 to-transparent rounded-full blur-3xl opacity-20"></div>
 
-      <div className="w-[90%] mx-auto px-6 lg:px-8 py-12 bg-canvas-white rounded-3xl sleek-shadow mt-8 mb-8">
+      <div className="w-[90%] mx-auto px-6 lg:px-4 py-12 bg-canvas-white rounded-3xl sleek-shadow mt-8 mb-8">
         <div className="grid lg:grid-cols-2 gap-16 items-center" style={{ minHeight: '75vh' }}>
           
           {/* Left Content - Text Section */}
-          <div className="space-y-10">
+          <div className="space-y-10 ml-10">
             {/* Main Headlines */}
             <div className="space-y-6">
               <div className="space-y-2">
-                <h1 className="maharlika-font text-7xl lg:text-8xl xl:text-9xl font-bold leading-none">
-                  <span className="text-gradient">Luxury</span>
+                <h1 className="maharlika-font text-7xl lg:text-8xl xl:text-9xl leading-none">
+                  <span className="text-gradient">Luxurious</span>
                 </h1>
                 <h2 className="breathing-font text-8xl lg:text-6xl xl:text-7xl font-semibold text-canvas-brown leading-none">
                   Nails
@@ -44,18 +44,18 @@ const Hero = () => {
               
               <div className="flex items-center space-x-4">
                 <div className="h-px w-12 bg-gradient-to-r from-canvas-pink to-canvas-brown"></div>
-                <span className="tenor-font text-lg text-canvas-black">from a Nail Tech That Cares</span>
+                <span className="breathing-font text-2xl text-canvas-black">From a Nail Tech That Cares</span>
                 <span className="text-2xl">💅🏽</span>
               </div>
             </div>
 
             {/* Description Card */}
             <div>
-              <p className="tenor-font text-lg leading-relaxed text-canvas-black mb-6">
-                At <span className="font-bold text-canvas-pink">The Nail Canvas</span>, we believe your nails are your canvas for self-expression. Step into our luxurious, serene space where every detail is designed to make you feel pampered and confident.
+              <p className="tenor-font text-md leading-relaxed text-canvas-black mb-6">
+                At <span className="font-bold text-canvas-brown">The Nail Canvas</span>, we believe your nails are your canvas for self-expression. Step into our luxurious, serene space where every detail is designed to make you feel pampered and confident.
               </p>
 
-              <p className='tenor-font text-lg leading-relaxed text-canvas-black mb-8'>
+              <p className='tenor-font text-md leading-relaxed text-canvas-black mb-8'>
                 Our expert nail technician combines years of professional artistry with an eye for perfection, delivering results that go beyond ordinary manicures. From timeless classics to bold, trend-setting designs — each set is a personalized masterpiece that reflects your unique style.
               </p>
               
@@ -89,15 +89,15 @@ const Hero = () => {
             {/* Stats Row */}
             <div className="grid grid-cols-3 gap-6">
               <div className="stats-card text-center rounded-2xl p-6 hover-lift">
-                <div className="maharlika-font text-3xl font-bold text-canvas-pink mb-1">500+</div>
+                <div className="maharlika-font text-3xl font-bold text-canvas-brown mb-1">500+</div>
                 <div className="tenor-font text-sm text-canvas-black">Happy Clients</div>
               </div>
               <div className="stats-card text-center rounded-2xl p-6 hover-lift">
-                <div className="maharlika-font text-3xl font-bold text-canvas-pink mb-1">⭐ 5.0</div>
+                <div className="maharlika-font text-3xl font-bold text-canvas-brown mb-1">⭐ 5.0</div>
                 <div className="tenor-font text-sm text-canvas-black">Average Rating</div>
               </div>
               <div className="stats-card text-center rounded-2xl p-6 hover-lift">
-                <div className="maharlika-font text-3xl font-bold text-canvas-pink mb-1">3+</div>
+                <div className="maharlika-font text-3xl font-bold text-canvas-brown mb-1">3+</div>
                 <div className="tenor-font text-sm text-canvas-black">Years Experience</div>
               </div>
             </div>
