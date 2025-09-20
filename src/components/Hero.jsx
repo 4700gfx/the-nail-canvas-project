@@ -26,7 +26,7 @@ const Hero = () => {
       <div className="absolute top-0 right-0 w-96 h-96 bg-gradient-to-bl from-pink-50 to-transparent rounded-full blur-3xl opacity-30"></div>
       <div className="absolute bottom-0 left-0 w-80 h-80 bg-gradient-to-tr from-orange-50 to-transparent rounded-full blur-3xl opacity-20"></div>
 
-      <div className="w-[90%] mx-auto px-6 lg:px-8 py-12 bg-white rounded-3xl sleek-shadow mt-8 mb-8">
+      <div className="w-[90%] mx-auto px-6 lg:px-8 py-12 bg-canvas-white rounded-3xl sleek-shadow mt-8 mb-8">
         <div className="grid lg:grid-cols-2 gap-16 items-center" style={{ minHeight: '75vh' }}>
           
           {/* Left Content - Text Section */}
@@ -77,7 +77,7 @@ const Hero = () => {
               
               {/* CTA Buttons */}
               <div className="flex flex-col sm:flex-row gap-4">
-                <button className="btn-primary px-8 py-4 rounded-full font-semibold text-white text-lg hover-lift">
+                <button className="bg-canvas-pink px-8 py-4 rounded-full font-semibold text-white text-lg hover-lift">
                   Book Your Appointment
                 </button>
                 <button className="btn-secondary px-8 py-4 rounded-full font-semibold hover-lift">

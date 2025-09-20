@@ -3,7 +3,7 @@
 
 /* Main Styling */
 body {
-  background-color: #a1676675;
+  background-color: #a1676627;
 }
 
 h1, h2 {
@@ -30,7 +30,7 @@ h3, h4, h5 {
 @theme {
   --color-canvas-white: #FFF9F7;
   --color-canvas-black: #151716;
-  --color-canvas-pink: #FF3CD7;
+  --color-canvas-pink: #F4BCCC;
   --color-canvas-brown: #5C2314;
   --font-canvas-header: "Breathing";
   --font-canvas-subheader: "Maharlika";
