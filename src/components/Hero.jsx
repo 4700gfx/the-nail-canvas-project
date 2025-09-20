@@ -50,7 +50,7 @@ const Hero = () => {
             </div>
 
             {/* Description Card */}
-            <div className="glass-card rounded-3xl p-8 sleek-shadow">
+            <div>
               <p className="tenor-font text-lg leading-relaxed text-canvas-black mb-6">
                 At <span className="font-bold text-canvas-pink">The Nail Canvas</span>, we believe your nails are your canvas for self-expression. Step into our luxurious, serene space where every detail is designed to make you feel pampered and confident.
               </p>
