@@ -1,4 +1,149 @@
 @import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Tenor+Sans&display=swap');
 
+/* Main Styling */
+body {
+  background-color: #a1676675;
+}
 
+h1, h2 {
+  font-family: "Belleza", sans-serif;
+}
 
+h3, h4, h5 {
+}
+
+/* Custom Fonts */
+@font-face {
+  font-family: "Breathing";
+  src: url(./assets/fonts/Breathing.ttf);
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Maharlika";
+  src: url(./assets/fonts/Maharlika-Regular.ttf);
+  font-display: swap;
+}
+
+/* Custom Palette */
+@theme {
+  --color-canvas-white: #FFF9F7;
+  --color-canvas-black: #151716;
+  --color-canvas-pink: #FF3CD7;
+  --color-canvas-brown: #5C2314;
+  --font-canvas-header: "Breathing";
+  --font-canvas-subheader: "Maharlika";
+}
+
+/* Hero Section Styles */
+.breathing-font {
+  font-family: "Breathing", "Georgia", serif;
+  font-weight: 400;
+}
+
+.maharlika-font {
+  font-family: "Maharlika", "Times New Roman", serif;
+  font-weight: 400;
+}
+
+.tenor-font {
+  font-family: "Tenor Sans", sans-serif;
+}
+
+/* Scrolling Animation */
+.scrolling-grid {
+  animation: scroll 25s linear infinite;
+}
+
+@keyframes scroll {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-100%); }
+}
+
+/* Visual Effects */
+.text-gradient {
+  background: linear-gradient(135deg, #FF3CD7, #5C2314);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.glass-card {
+  backdrop-filter: blur(20px);
+  background: rgba(255, 249, 247, 0.8);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+.sleek-shadow {
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.08);
+}
+
+.hover-lift {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.hover-lift:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 25px 80px rgba(0, 0, 0, 0.12);
+}
+
+.image-mask {
+  mask-image: linear-gradient(to bottom, transparent 0%, black 10%, black 90%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 10%, black 90%, transparent 100%);
+}
+
+/* Button Styles */
+.btn-primary {
+  background: linear-gradient(135deg, #FF3CD7, #ff1cc7);
+  box-shadow: 0 8px 25px rgba(255, 60, 215, 0.3);
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 15px 35px rgba(255, 60, 215, 0.4);
+}
+
+.btn-secondary {
+  border: 2px solid #5C2314;
+  color: #5C2314;
+  background: transparent;
+  transition: all 0.3s ease;
+}
+
+.btn-secondary:hover {
+  background: #5C2314;
+  color: white;
+  transform: translateY(-2px);
+}
+
+/* Service Tags */
+.service-tag {
+  background: linear-gradient(135deg, rgba(255, 60, 215, 0.1), rgba(92, 35, 20, 0.1));
+  border: 1px solid rgba(255, 60, 215, 0.2);
+  backdrop-filter: blur(10px);
+}
+
+/* Stats Cards */
+.stats-card {
+  background: linear-gradient(145deg, #ffffff, #f8f9fa);
+  border: 1px solid rgba(255, 60, 215, 0.1);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+}
+
+/* Mobile Responsive Adjustments */
+@media (max-width: 768px) {
+  .breathing-font {
+    font-size: 3rem;
+  }
+  
+  .maharlika-font {
+    font-size: 2rem;
+  }
+  
+  .scrolling-grid {
+    animation-duration: 20s;
+  }
+}
