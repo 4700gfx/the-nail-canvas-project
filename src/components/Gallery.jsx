@@ -10,6 +10,10 @@ import nailPic8 from '../assets/images/nail-pic-8.jpeg';
 import nailPic9 from '../assets/images/nail-pic-9.png';
 import nailPic10 from '../assets/images/nail-pic-10.jpeg';
 import nailPic11 from '../assets/images/nail-pic-11.jpeg';
+import benefit1 from '../assets/images/benefits-pics-1.jpeg'
+import benefit2 from '../assets/images/benefits-pics-2.jpeg'
+import benefit3 from '../assets/images/benefits-pics-3.jpeg'
+
 
 const Gallery = () => {
   const [selectedCategory, setSelectedCategory] = useState('all');
@@ -17,6 +21,8 @@ const Gallery = () => {
   const [isAutoScrolling, setIsAutoScrolling] = useState(true);
   const carouselRef = useRef(null);
   const scrollIntervalRef = useRef(null);
+  const backgroundCarouselRef = useRef(null);
+  const backgroundScrollRef = useRef(null);
 
   // Gallery data with categories and descriptions
   const galleryData = [
@@ -99,6 +105,9 @@ const Gallery = () => {
     }
   ];
 
+  // Background benefit images for carousel
+  const benefitImages = [benefit1, benefit2, benefit3];
+
   const categories = [
     { id: 'all', name: 'All Designs', icon: '✨' },
     { id: 'luxury-manicures', name: 'Luxury Manicures', icon: '💅' },
@@ -137,6 +146,29 @@ const Gallery = () => {
     };
   }, [isAutoScrolling, selectedCategory]);
 
+  // Background carousel auto-scroll
+  useEffect(() => {
+    if (backgroundCarouselRef.current) {
+      backgroundScrollRef.current = setInterval(() => {
+        const bgCarousel = backgroundCarouselRef.current;
+        const scrollAmount = 1; // Slower speed for background
+        
+        bgCarousel.scrollLeft += scrollAmount;
+        
+        // Reset scroll for infinite effect
+        if (bgCarousel.scrollLeft >= bgCarousel.scrollWidth - bgCarousel.clientWidth) {
+          bgCarousel.scrollLeft = 0;
+        }
+      }, 50); // Slower intervals for background
+    }
+
+    return () => {
+      if (backgroundScrollRef.current) {
+        clearInterval(backgroundScrollRef.current);
+      }
+    };
+  }, []);
+
   // Manual navigation functions
   const scrollLeft = () => {
     setIsAutoScrolling(false);
@@ -172,12 +204,44 @@ const Gallery = () => {
   };
 
   return (
-    <section className="min-h-screen relative overflow-hidden py-20">
-      {/* Subtle background accents */}
-      <div className="absolute top-0 right-0 w-96 h-96 bg-gradient-to-bl from-canvas-pink/10 to-transparent rounded-full blur-3xl"></div>
-      <div className="absolute bottom-0 left-0 w-80 h-80 bg-gradient-to-tr from-canvas-brown/10 to-transparent rounded-full blur-3xl"></div>
+    <section className="min-h-screen relative overflow-hidden py-20 w-8/10 mx-auto rounded-4xl">
+      {/* Background Carousel */}
+      <div className="absolute inset-0 z-0">
+        <div 
+          ref={backgroundCarouselRef}
+          className="flex h-full overflow-hidden"
+          style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
+        >
+          {/* Triple the benefit images for seamless loop */}
+          {[...benefitImages, ...benefitImages, ...benefitImages, ...benefitImages, ...benefitImages].map((image, index) => (
+            <div
+              key={`bg-${index}`}
+              className="flex-shrink-0 w-screen h-full relative"
+            >
+              <img
+                src={image}
+                alt={`Background benefit ${index}`}
+                className="w-full h-full object-cover"
+                onError={(e) => {
+                  e.target.style.display = 'none';
+                  e.target.parentElement.style.background = 'linear-gradient(135deg, #FF3CD7, #5C2314)';
+                }}
+              />
+              {/* Dark overlay for readability */}
+              <div className="absolute inset-0 bg-black/60"></div>
+            </div>
+          ))}
+        </div>
+        
+        {/* Additional gradient overlay for content readability */}
+        <div className="absolute inset-0 bg-gradient-to-b from-white/80 via-white/60 to-white/80"></div>
+      </div>
 
-      <div className="w-[95%] mx-auto px-6 lg:px-4">
+      {/* Subtle foreground accents */}
+      <div className="absolute top-0 right-0 w-96 h-96 bg-gradient-to-bl from-canvas-pink/10 to-transparent rounded-full blur-3xl z-10"></div>
+      <div className="absolute bottom-0 left-0 w-80 h-80 bg-gradient-to-tr from-canvas-brown/10 to-transparent rounded-full blur-3xl z-10"></div>
+
+      <div className="w-[95%] mx-auto px-6 lg:px-4 relative z-20">
         {/* Header Section */}
         <div className="text-center mb-16 space-y-6">
           <h1 className="maharlika-font text-6xl lg:text-7xl text-canvas-brown">
@@ -333,25 +397,25 @@ const Gallery = () => {
 
         {/* Call to Action Section */}
         <div className="text-center mt-20">
-          <div className="bg-canvas-brown rounded-3xl sleek-shadow p-12 max-w-4xl mx-auto relative overflow-hidden">
+          <div className="bg-canvas-white rounded-3xl sleek-shadow p-12 max-w-4xl mx-auto relative overflow-hidden">
             {/* Decorative elements */}
             <div className="absolute top-0 right-0 w-32 h-32 bg-canvas-pink/5 rounded-full blur-2xl"></div>
             <div className="absolute bottom-0 left-0 w-24 h-24 bg-canvas-brown/5 rounded-full blur-xl"></div>
             
             <div className="relative z-10 space-y-6">
-              <h2 className="maharlika-font text-2xl lg:text-4xl text-canvas-white">
+              <h2 className="maharlika-font text-4xl lg:text-5xl text-canvas-brown">
                 Ready to Create Your Masterpiece?
               </h2>
-              <p className="tenor-font text-md text-canvas-white max-w-2xl mx-auto">
+              <p className="tenor-font text-lg text-canvas-black max-w-2xl mx-auto">
                 Let's bring your nail art vision to life. Book your appointment today and experience 
                 the artistry that sets us apart from the rest.
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4">
-                <button className="bg-canvas-pink px-8 py-4 rounded-full font-semibold text-white text-md hover-lift">
+                <button className="bg-canvas-pink px-8 py-4 rounded-full font-semibold text-white text-lg hover-lift">
                   Book Your Session
                 </button>
-                <button className="bg-canvas-black text-white text-md px-10 py-4 rounded-full font-semibold hover-lift">
+                <button className="btn-secondary px-8 py-4 rounded-full font-semibold hover-lift">
                   View Pricing
                 </button>
               </div>
