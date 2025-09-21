@@ -15,7 +15,7 @@ const Services = () => {
       <div className="relative z-10">
         {/* Enhanced Main Title */}
         <div className="text-center mb-20">
-          <h1 className='maharlika-font text-6xl md:text-7xl lg:text-8xl bg-gradient-to-r from-pink-500 via-purple-600 to-pink-600 bg-clip-text text-transparent mx-auto leading-tight hover:scale-105 transition-transform duration-500 cursor-default drop-shadow-sm'>
+          <h1 className='maharlika-font text-6xl md:text-7xl lg:text-8xl bg-gradient-to-r from-pink-500 via-purple-600 to-pink-600 bg-clip-text text-canvas-brown mx-auto leading-tight hover:scale-105 transition-transform duration-500 cursor-default drop-shadow-sm'>
             What We Offer
           </h1>
           <h3 className='breathing-font text-3xl text-canvas-brown'>
@@ -26,7 +26,7 @@ const Services = () => {
             <div className="w-24 h-1 bg-gradient-to-r from-pink-500 to-purple-600 rounded-full"></div>
             <div className="w-12 h-1 bg-gradient-to-r from-purple-600 to-transparent rounded-full"></div>
           </div>
-          <p className="tenor-font text-md text-gray-600 mt-6 max-w-2xl mx-auto leading-relaxed">
+          <p className="tenor-font text-sm text-gray-600 mt-6 max-w-2xl mx-auto leading-relaxed">
             Discover our premium nail services designed to pamper, protect, and perfect your natural beauty. 
             Our dedication to providing a safe and healthy nail set and experience is everything that The Nail Canvas is about.
           </p>
@@ -73,7 +73,7 @@ const Services = () => {
                 </div>
                 
                 <div className="flex-grow">
-                  <p className='tenor-font text-base leading-relaxed text-gray-600 group-hover:text-gray-700 transition-colors duration-300 mb-6'>
+                  <p className='tenor-font text-sm leading-relaxed text-gray-600 group-hover:text-gray-700 transition-colors duration-300 mb-6'>
                     With our advanced Gel Design system, we create effective, odorless and beautiful nail sets that prioritize the health of your natural nails. Our premium gel formulations are free from harmful chemicals, ensuring your nails remain strong and healthy while achieving stunning results.
                   </p>
                 </div>
@@ -105,7 +105,7 @@ const Services = () => {
                 </div>
                 
                 <div className="flex-grow">
-                  <p className='tenor-font text-base leading-relaxed text-gray-600 group-hover:text-gray-700 transition-colors duration-300 mb-6'>
+                  <p className='tenor-font text-sm leading-relaxed text-gray-600 group-hover:text-gray-700 transition-colors duration-300 mb-6'>
                     Our innovative approach seamlessly combines elegance with efficiency, delivering stunning results that respect your valuable time without compromising on quality or artistry. Each design is meticulously crafted using cutting-edge techniques and premium materials for magazine-worthy results.
                   </p>
                 </div>
@@ -137,7 +137,7 @@ const Services = () => {
                 </div>
                 
                 <div className="flex-grow">
-                  <p className='tenor-font text-base leading-relaxed text-gray-600 group-hover:text-gray-700 transition-colors duration-300 mb-6'>
+                  <p className='tenor-font text-sm leading-relaxed text-gray-600 group-hover:text-gray-700 transition-colors duration-300 mb-6'>
                     Beyond creating beautiful nails, we provide a complete journey of relaxation, pampering, and personalized self-care that leaves you feeling refreshed and renewed. Every appointment is designed as your personal escape with curated music, aromatherapy, and luxurious treatments.
                   </p>
                 </div>

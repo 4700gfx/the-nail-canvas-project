@@ -67,9 +67,13 @@ const Benefits = () => {
             </svg>
           </div>
           
-          <h1 className='maharlika-font text-6xl md:text-7xl lg:text-8xl bg-gradient-to-r from-emerald-500 via-purple-600 to-pink-600 bg-clip-text text-transparent leading-tight hover:scale-105 transition-transform duration-500 cursor-default mb-8 py-2'>
+          <h1 className='maharlika-font text-6xl md:text-7xl lg:text-8xl text-canvas-brown leading-tight hover:scale-105 transition-transform duration-500 cursor-default py-2'>
             Benefits
           </h1>
+
+          <h3 className='breathing-font text-2xl text-canvas-brown mb-2'>
+            The Benefits of Gel Designs 
+          </h3>
           
           <div className="flex items-center justify-center space-x-4 mb-8">
             <div className="w-16 h-1 bg-gradient-to-r from-transparent to-emerald-500 rounded-full animate-pulse"></div>
@@ -77,9 +81,9 @@ const Benefits = () => {
             <div className="w-16 h-1 bg-gradient-to-r from-pink-500 to-transparent rounded-full animate-pulse delay-1000"></div>
           </div>
           
-          <p className="tenor-font text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+          <p className="tenor-font text-md text-gray-600 max-w-3xl mx-auto leading-relaxed">
             Discover the transformative advantages of our advanced Gel-Based Nail Design system, 
-            where beauty meets wellness in perfect harmony.
+            where beauty meets wellness in perfect harmony. Look into the benefits of The Nail Canvas benefits below:
           </p>
         </div>
 
@@ -122,7 +126,7 @@ const Benefits = () => {
                     {benefit.title}
                   </h3>
                   
-                  <p className="tenor-font text-base leading-relaxed text-gray-600 group-hover:text-gray-700 transition-colors duration-500 mb-6">
+                  <p className="tenor-font text-sm leading-relaxed text-gray-600 group-hover:text-gray-700 transition-colors duration-500 mb-6">
                     {benefit.description}
                   </p>
 
@@ -143,50 +147,6 @@ const Benefits = () => {
               </div>
             </div>
           ))}
-        </div>
-
-        {/* Enhanced Additional Benefits Summary */}
-        <div className="bg-white rounded-3xl p-10 md:p-16 shadow-xl border border-gray-100 relative overflow-hidden">
-          <div className="absolute top-0 right-0 w-40 h-40 bg-gradient-to-br from-pink-200 to-purple-200 rounded-full blur-3xl opacity-30"></div>
-          <div className="absolute bottom-0 left-0 w-48 h-48 bg-gradient-to-tr from-emerald-200 to-teal-200 rounded-full blur-3xl opacity-30"></div>
-          
-          <div className="relative z-10 text-center">
-            <h2 className="breathing-font text-4xl md:text-5xl font-bold bg-gradient-to-r from-gray-700 to-gray-900 bg-clip-text text-transparent mb-8">
-              Why Choose Our Gel System?
-            </h2>
-            
-            <div className="grid md:grid-cols-3 gap-8 mt-12">
-              <div className="flex flex-col items-center space-y-4 p-6 bg-white rounded-2xl shadow-lg border border-gray-50 hover:shadow-xl hover:-translate-y-2 transition-all duration-500 group">
-                <div className="w-16 h-16 bg-gradient-to-br from-emerald-100 to-emerald-200 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-500">
-                  <svg className="w-8 h-8 text-emerald-600" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                  </svg>
-                </div>
-                <span className="tenor-font text-lg text-gray-800 font-bold">100% Non-Toxic</span>
-                <p className="text-sm text-gray-600 text-center">Safe for all skin types</p>
-              </div>
-              
-              <div className="flex flex-col items-center space-y-4 p-6 bg-white rounded-2xl shadow-lg border border-gray-50 hover:shadow-xl hover:-translate-y-2 transition-all duration-500 group">
-                <div className="w-16 h-16 bg-gradient-to-br from-purple-100 to-purple-200 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-500">
-                  <svg className="w-8 h-8 text-purple-600" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                  </svg>
-                </div>
-                <span className="tenor-font text-lg text-gray-800 font-bold">3+ Weeks Durability</span>
-                <p className="text-sm text-gray-600 text-center">Long-lasting results</p>
-              </div>
-              
-              <div className="flex flex-col items-center space-y-4 p-6 bg-white rounded-2xl shadow-lg border border-gray-50 hover:shadow-xl hover:-translate-y-2 transition-all duration-500 group">
-                <div className="w-16 h-16 bg-gradient-to-br from-pink-100 to-pink-200 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-500">
-                  <svg className="w-8 h-8 text-pink-600" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                  </svg>
-                </div>
-                <span className="tenor-font text-lg text-gray-800 font-bold">Strengthens Nails</span>
-                <p className="text-sm text-gray-600 text-center">Promotes healthy growth</p>
-              </div>
-            </div>
-          </div>
         </div>
       </div>
     </section>

@@ -15,8 +15,8 @@ function App() {
       <Hero></Hero>
       <Services></Services>
       <Benefits></Benefits>
-      <Testimony></Testimony>
       <Pricing></Pricing>
+      <Testimony></Testimony>
     </div>
   )
 }

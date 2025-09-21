@@ -51,11 +51,11 @@ const Hero = () => {
 
             {/* Description Card */}
             <div>
-              <p className="tenor-font text-md leading-relaxed text-canvas-black mb-6">
+              <p className="tenor-font text-sm leading-relaxed text-canvas-black mb-6">
                 At <span className="font-bold text-canvas-brown">The Nail Canvas</span>, we believe your nails are your canvas for self-expression. Step into our luxurious, serene space where every detail is designed to make you feel pampered and confident.
               </p>
 
-              <p className='tenor-font text-md leading-relaxed text-canvas-black mb-8'>
+              <p className='tenor-font text-sm leading-relaxed text-canvas-black mb-8'>
                 Our expert nail technician combines years of professional artistry with an eye for perfection, delivering results that go beyond ordinary manicures. From timeless classics to bold, trend-setting designs — each set is a personalized masterpiece that reflects your unique style.
               </p>
               
