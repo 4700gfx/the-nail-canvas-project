@@ -33,27 +33,7 @@ const Services = () => {
         </div>
 
         <div className='max-w-[95%] xl:max-w-[90%] mx-auto'>
-          {/* Enhanced Image Gallery Placeholder */}
-          <div className='mb-16 -mx-6'>
-            <div className='bg-gradient-to-r from-pink-200 via-purple-200 to-pink-300 rounded-3xl h-96 flex items-center justify-center shadow-2xl hover:shadow-3xl transition-all duration-500 border border-white/50 backdrop-blur-sm relative overflow-hidden group'>
-              {/* Animated background pattern */}
-              <div className="absolute inset-0 opacity-30">
-                <div className="absolute top-4 left-4 w-8 h-8 bg-white/40 rounded-full animate-ping delay-0"></div>
-                <div className="absolute bottom-8 right-12 w-6 h-6 bg-white/40 rounded-full animate-ping delay-1000"></div>
-                <div className="absolute top-1/2 left-8 w-4 h-4 bg-white/40 rounded-full animate-ping delay-500"></div>
-              </div>
-              
-              <div className="text-center relative z-10">
-                <div className="w-24 h-24 bg-white/30 rounded-full mx-auto mb-8 flex items-center justify-center backdrop-blur-sm group-hover:scale-110 transition-transform duration-500 shadow-lg">
-                  <svg className="w-12 h-12 text-purple-600 group-hover:text-pink-600 transition-colors duration-500" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M4 3a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V5a2 2 0 00-2-2H4zm12 12H4l4-8 3 6 2-4 3 6z" clipRule="evenodd" />
-                  </svg>
-                </div>
-                <h3 className="breathing-font text-2xl text-purple-700 font-semibold mb-3">Stunning Nail Art Gallery</h3>
-                <p className="tenor-font text-purple-600 font-medium text-lg">Coming Soon - A showcase of our finest work</p>
-              </div>
-            </div>
-          </div>
+
 
           {/* Enhanced Services Grid - Removed min-height and improved layout */}
           <div className="grid lg:grid-cols-3 gap-8 lg:gap-12">
@@ -159,7 +139,7 @@ const Services = () => {
           {/* Enhanced Call to Action */}
           <div className="text-center mt-20">
             <div className="inline-flex flex-col items-center">
-              <button className="group bg-gradient-to-r from-pink-500 to-purple-600 text-white px-10 py-5 rounded-full font-semibold text-lg shadow-xl hover:shadow-2xl transform hover:scale-110 transition-all duration-300 relative overflow-hidden mb-4">
+              <button className="group bg-gradient-to-r from-pink-500 to-purple-600 text-white px-10 py-5 rounded-full font-semibold text-md shadow-xl hover:shadow-2xl transform hover:scale-110 transition-all duration-300 relative overflow-hidden mb-4">
                 <span className="relative z-10 flex items-center">
                   Experience Our Services
                   <svg className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
