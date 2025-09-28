@@ -27,8 +27,7 @@ const Services = () => {
             <div className="w-12 h-1 bg-gradient-to-r from-purple-600 to-transparent rounded-full"></div>
           </div>
           <p className="tenor-font text-sm text-gray-600 mt-6 max-w-2xl mx-auto leading-relaxed">
-            Discover our premium nail services designed to pamper, protect, and perfect your natural beauty. 
-            Our dedication to providing a safe and healthy nail set and experience is everything that The Nail Canvas is about.
+              Discover our premium nail services, thoughtfully designed to pamper, protect, and enhance your natural beauty. At The Nail Canvas, we are dedicated to delivering not only stunning results but also a safe, healthy, and rejuvenating experience every time.
           </p>
         </div>
 
@@ -54,7 +53,7 @@ const Services = () => {
                 
                 <div className="flex-grow">
                   <p className='tenor-font text-sm leading-relaxed text-gray-600 group-hover:text-gray-700 transition-colors duration-300 mb-6'>
-                    With our advanced Gel Design system, we create effective, odorless and beautiful nail sets that prioritize the health of your natural nails. Our premium gel formulations are free from harmful chemicals, ensuring your nails remain strong and healthy while achieving stunning results.
+                    With our innovative nail design system, we create stunning, odor-free sets that put the health of your natural nails first. Our premium gel formulations are free from harsh chemicals, keeping your nails strong, beautiful, and nourished while delivering flawless, long-lasting results.
                   </p>
                 </div>
 
@@ -86,7 +85,7 @@ const Services = () => {
                 
                 <div className="flex-grow">
                   <p className='tenor-font text-sm leading-relaxed text-gray-600 group-hover:text-gray-700 transition-colors duration-300 mb-6'>
-                    Our innovative approach seamlessly combines elegance with efficiency, delivering stunning results that respect your valuable time without compromising on quality or artistry. Each design is meticulously crafted using cutting-edge techniques and premium materials for magazine-worthy results.
+                    Our innovative approach blends elegance with efficiency, giving you flawless results that honor your time without ever sacrificing quality or artistry. Every design is thoughtfully crafted with cutting-edge techniques and premium materials, delivering a finish worthy of any magazine cover.
                   </p>
                 </div>
 
@@ -118,7 +117,7 @@ const Services = () => {
                 
                 <div className="flex-grow">
                   <p className='tenor-font text-sm leading-relaxed text-gray-600 group-hover:text-gray-700 transition-colors duration-300 mb-6'>
-                    Beyond creating beautiful nails, we provide a complete journey of relaxation, pampering, and personalized self-care that leaves you feeling refreshed and renewed. Every appointment is designed as your personal escape with curated music, aromatherapy, and luxurious treatments.
+                    At The Nail Canvas, beauty is only the beginning. We offer a complete journey of relaxation, pampering, and personalized self-care that leaves you feeling refreshed and renewed. Each appointment is your private escape, enhanced with curated music, soothing aromatherapy, and luxurious treatments crafted for your well-being.
                   </p>
                 </div>
 

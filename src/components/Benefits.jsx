@@ -16,7 +16,7 @@ const Benefits = () => {
     {
       id: 1,
       title: "Odorless + Safe",
-      description: "Experience the ultimate comfort with our advanced gel formulations that eliminate harsh chemical odors while using only non-toxic, skin-safe compounds. Perfect for sensitive individuals and pregnant clients.",
+      description: "Indulge in the ultimate comfort with our advanced gel formulations, expertly crafted to be free of harsh chemical odors and made only from non-toxic, skin-loving ingredients. Perfectly gentle for sensitive skin and expectant mothers, our formulas elevate your nail care into a truly pampering and safe experience.",
       image: benefit1,
       icon: (
         <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -30,7 +30,7 @@ const Benefits = () => {
     {
       id: 2,
       title: "Long-Lasting Beauty",
-      description: "Our premium gel system delivers exceptional durability with chip-resistant formulas that maintain their stunning appearance for weeks. Say goodbye to frequent touch-ups and hello to lasting perfection.",
+      description: "Our premium nail design offers exceptional durability with chip-resistant formulas that keep your nails flawlessly beautiful for weeks. Embrace lasting perfection and say goodbye to the hassle of frequent touch-ups.",
       image: benefit2,
       icon: (
         <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -44,7 +44,7 @@ const Benefits = () => {
     {
       id: 3,
       title: "Nail Health First",
-      description: "Our innovative approach strengthens and protects your natural nails while delivering stunning results. Enriched with nourishing ingredients that promote healthy nail growth and prevent damage.",
+      description: "Our innovative approach not only delivers stunning results but also strengthens and protects your natural nails. Enriched with nourishing ingredients, our treatments promote healthy nail growth while preventing damage, ensuring your nails look beautiful and stay strong.",
       image: benefit3,
       icon: (
         <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -331,7 +331,7 @@ const Benefits = () => {
                       }}
                     >
                       <span 
-                        className="breathing-font text-xl font-bold bg-gradient-to-r from-gray-600 to-gray-800 bg-clip-text text-transparent"
+                        className="tenor-font text-xl font-bold bg-gradient-to-r from-gray-600 to-gray-800 bg-clip-text text-transparent"
                         style={{
                           transform: `scale(${isVisible ? 1 : 0})`,
                           transition: `transform 0.4s ease-out ${index * 150 + 700}ms`

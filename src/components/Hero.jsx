@@ -114,11 +114,11 @@ const Hero = () => {
               animationPhase >= 2 ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'
             }`}>
               <p className="tenor-font text-sm leading-relaxed text-canvas-black mb-6">
-                At <span className="font-bold text-canvas-brown">The Nail Canvas</span>, we believe your nails are your canvas for self-expression. Step into our luxurious, serene space where every detail is designed to make you feel pampered and confident.
+                At <span className="font-bold text-canvas-brown">The Nail Canvas</span>, we believe your nails are a true work of art—a reflection of your individuality and style. Step into our serene, luxurious space, thoughtfully designed to inspire relaxation and leave you feeling pampered, confident, and renewed.
               </p>
 
               <p className='tenor-font text-sm leading-relaxed text-canvas-black mb-8'>
-                Our expert nail technician combines years of professional artistry with an eye for perfection, delivering results that go beyond ordinary manicures. From timeless classics to bold, trend-setting designs — each set is a personalized masterpiece that reflects your unique style.
+                Our expert nail technician combines years of professional artistry with an eye for perfection, delivering results that go beyond ordinary manicures. From timeless classics to bold, trend-setting designs — each set is a personalized masterpiece that reflects your unique style. Come and create your creation with the Nail Canvas   
               </p>
               
               {/* Service Tags with staggered animation */}
