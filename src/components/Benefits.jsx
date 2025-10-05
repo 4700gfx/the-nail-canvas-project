@@ -145,7 +145,7 @@ const Benefits = () => {
   }, []);
 
   return (
-    <section ref={sectionRef} className='flex flex-col py-20 px-6 relative overflow-hidden'>
+    <section ref={sectionRef} className='flex flex-col py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden'>
       {/* Enhanced Background decorative elements with in/out view animations */}
       <div className={`absolute inset-0 opacity-5 transition-all duration-2000 ease-out ${
         sectionInView && backgroundVisible ? 'scale-100 opacity-5' : 'scale-75 opacity-0'
@@ -181,21 +181,21 @@ const Benefits = () => {
 
       <div className="relative z-10 max-w-7xl mx-auto w-full">
         {/* Enhanced Header Section with in/out view animations */}
-        <div className={`text-center mb-24 transition-all duration-1000 ease-out ${
+        <div className={`text-center mb-12 sm:mb-16 lg:mb-24 transition-all duration-1000 ease-out ${
           headerVisible ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-12'
         }`}>
-          <div className={`inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br from-pink-400 to-purple-500 rounded-full mb-8 shadow-xl transition-all duration-1000 ease-out ${
+          <div className={`inline-flex items-center justify-center w-16 h-16 sm:w-20 sm:h-20 bg-gradient-to-br from-pink-400 to-purple-500 rounded-full mb-6 sm:mb-8 shadow-xl transition-all duration-1000 ease-out ${
             headerVisible ? 'opacity-100 scale-100 translate-y-0' : 'opacity-0 scale-75 translate-y-8'
           }`}
           style={{
             animation: headerVisible && sectionInView ? 'pulse 2s ease-in-out infinite, rotate 20s linear infinite' : 'none'
           }}>
-            <svg className="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <svg className="w-8 h-8 sm:w-10 sm:h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
             </svg>
           </div>
           
-          <h1 className={`maharlika-font text-6xl md:text-7xl lg:text-8xl text-canvas-brown leading-tight cursor-default py-2 transition-all duration-1000 ease-out delay-200 ${
+          <h1 className={`maharlika-font text-5xl sm:text-6xl md:text-7xl lg:text-8xl text-canvas-brown leading-tight cursor-default py-2 transition-all duration-1000 ease-out delay-200 ${
             headerVisible ? 'opacity-100 translate-y-0 scale-100' : 'opacity-0 translate-y-8 scale-95'
           }`}
           style={{
@@ -217,13 +217,13 @@ const Benefits = () => {
             </span>
           </h1>
 
-          <h3 className={`breathing-font text-2xl text-canvas-brown mb-2 transition-all duration-800 ease-out delay-400 ${
+          <h3 className={`breathing-font text-xl sm:text-2xl text-canvas-brown mb-2 transition-all duration-800 ease-out delay-400 ${
             headerVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'
           }`}>
             The Benefits of Gel Designs 
           </h3>
           
-          <div className={`flex items-center justify-center space-x-4 mb-8 transition-all duration-1000 ease-out delay-600 ${
+          <div className={`flex items-center justify-center space-x-4 mb-6 sm:mb-8 transition-all duration-1000 ease-out delay-600 ${
             headerVisible ? 'opacity-100 scale-100' : 'opacity-0 scale-75'
           }`}>
             <div 
@@ -249,7 +249,7 @@ const Benefits = () => {
             ></div>
           </div>
           
-          <p className={`tenor-font text-md text-gray-600 max-w-3xl mx-auto leading-relaxed transition-all duration-1000 ease-out delay-800 ${
+          <p className={`tenor-font text-sm sm:text-base text-gray-600 max-w-3xl mx-auto leading-relaxed px-4 transition-all duration-1000 ease-out delay-800 ${
             headerVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
           }`}>
             Discover the transformative advantages of our advanced Gel-Based Nail Design system, 
@@ -258,7 +258,7 @@ const Benefits = () => {
         </div>
 
         {/* Benefits Cards with enhanced in/out view animations */}
-        <div className="space-y-8 mb-20">
+        <div className="space-y-6 sm:space-y-8 mb-12 sm:mb-16 lg:mb-20">
           {benefitsData.map((benefit, index) => {
             const cardState = cardStates[index] || { inView: false, intersectionRatio: 0 };
             const isVisible = visibleCards.includes(index);
@@ -271,9 +271,9 @@ const Benefits = () => {
                 className="group p-2"
               >
                 <div 
-                  className={`bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl border border-gray-100 flex flex-col md:flex-row ${
-                    index % 2 === 1 ? 'md:flex-row-reverse' : ''
-                  } md:h-52 relative group-hover:scale-[1.02] transition-all duration-700 ${
+                  className={`bg-white rounded-2xl sm:rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl border border-gray-100 flex flex-col ${
+                    index % 2 === 1 ? 'lg:flex-row-reverse' : 'lg:flex-row'
+                  } relative group-hover:scale-[1.02] transition-all duration-700 ${
                     isVisible ? 'opacity-100 scale-100' : 'opacity-0 scale-95'
                   }`}
                   style={{
@@ -284,13 +284,13 @@ const Benefits = () => {
                 >
                 
                   {/* Enhanced gradient overlay with dynamic opacity */}
-                  <div className={`absolute inset-0 bg-gradient-to-r ${benefit.gradient} transition-all duration-700 rounded-3xl ${
+                  <div className={`absolute inset-0 bg-gradient-to-r ${benefit.gradient} transition-all duration-700 rounded-2xl sm:rounded-3xl ${
                     cardState.inView ? 'opacity-0 group-hover:opacity-5' : 'opacity-0'
                   }`}></div>
                 
                   {/* Image Section with parallax and enhanced animations */}
-                  <div className="relative overflow-hidden md:w-1/2 h-52 md:h-full p-6 flex items-center justify-center">
-                    <div className="relative w-full h-full rounded-2xl overflow-hidden shadow-inner">
+                  <div className="relative overflow-hidden lg:w-1/2 h-80 sm:h-96 lg:h-auto lg:min-h-[320px] xl:min-h-[360px] p-4 sm:p-6 flex items-center justify-center">
+                    <div className="relative w-full h-full rounded-xl sm:rounded-2xl overflow-hidden shadow-inner">
                       <img 
                         src={benefit.image} 
                         alt={benefit.title}
@@ -308,7 +308,7 @@ const Benefits = () => {
                   
                     {/* Floating Icon with enhanced in/out animations */}
                     <div 
-                      className={`absolute top-8 right-8 w-14 h-14 bg-gradient-to-br ${benefit.gradient} rounded-2xl flex items-center justify-center shadow-xl group-hover:rotate-12 group-hover:scale-125 transition-all duration-700 z-10`}
+                      className={`absolute top-6 sm:top-8 right-6 sm:right-8 w-12 h-12 sm:w-14 sm:h-14 bg-gradient-to-br ${benefit.gradient} rounded-xl sm:rounded-2xl flex items-center justify-center shadow-xl group-hover:rotate-12 group-hover:scale-125 transition-all duration-700 z-10`}
                       style={{
                         transform: `scale(${isVisible ? 1 : 0.3}) rotate(${isVisible ? '0deg' : '-180deg'})`,
                         opacity: isVisible ? 1 : 0,
@@ -316,14 +316,14 @@ const Benefits = () => {
                         animation: isVisible && cardState.inView ? `floatIcon 3s ease-in-out infinite ${index * 150 + 800}ms` : 'none'
                       }}
                     >
-                      <svg className="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <svg className="w-6 h-6 sm:w-7 sm:h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         {benefit.icon.props.children}
                       </svg>
                     </div>
 
                     {/* Number Badge with bounce and out animation */}
                     <div 
-                      className="absolute bottom-8 left-8 w-12 h-12 bg-white rounded-full flex items-center justify-center shadow-xl border-2 border-gray-50 group-hover:scale-110 transition-transform duration-500 z-10"
+                      className="absolute bottom-6 sm:bottom-8 left-6 sm:left-8 w-10 h-10 sm:w-12 sm:h-12 bg-white rounded-full flex items-center justify-center shadow-xl border-2 border-gray-50 group-hover:scale-110 transition-transform duration-500 z-10"
                       style={{
                         transform: `translateX(${isVisible ? '0px' : '-40px'}) scale(${isVisible ? 1 : 0.5})`,
                         opacity: isVisible ? 1 : 0,
@@ -331,7 +331,7 @@ const Benefits = () => {
                       }}
                     >
                       <span 
-                        className="tenor-font text-xl font-bold bg-gradient-to-r from-gray-600 to-gray-800 bg-clip-text text-transparent"
+                        className="tenor-font text-lg sm:text-xl font-bold bg-gradient-to-r from-gray-600 to-gray-800 bg-clip-text text-transparent"
                         style={{
                           transform: `scale(${isVisible ? 1 : 0})`,
                           transition: `transform 0.4s ease-out ${index * 150 + 700}ms`
@@ -342,10 +342,10 @@ const Benefits = () => {
                     </div>
                   </div>
 
-                  {/* Content Section with enhanced staggered animations */}
-                  <div className="md:w-1/2 p-8 md:p-10 flex flex-col justify-center relative z-10">
+                  {/* Content Section with enhanced staggered animations - FIXED HEIGHT ISSUE */}
+                  <div className="lg:w-1/2 p-6 sm:p-8 lg:p-8 xl:p-10 flex flex-col justify-center relative z-10">
                     <h3 
-                      className={`breathing-font text-2xl md:text-2xl mt-5 font-bold text-gray-800 mb-4 group-hover:text-${benefit.hoverColor} transition-colors duration-500`}
+                      className={`breathing-font text-2xl sm:text-3xl lg:text-2xl xl:text-3xl font-bold text-gray-800 mb-4 sm:mb-4 group-hover:text-${benefit.hoverColor} transition-colors duration-500`}
                       style={{
                         transform: `translateX(${isVisible ? '0px' : (index % 2 === 0 ? '30px' : '-30px')})`,
                         opacity: isVisible ? 1 : 0,
@@ -356,7 +356,7 @@ const Benefits = () => {
                     </h3>
                   
                     <p 
-                      className="tenor-font text-sm leading-relaxed text-gray-600 group-hover:text-gray-700 transition-colors duration-500 mb-6"
+                      className="tenor-font text-base sm:text-base leading-relaxed text-gray-600 group-hover:text-gray-700 transition-colors duration-500 mb-6 sm:mb-6"
                       style={{
                         transform: `translateY(${isVisible ? '0px' : '20px'})`,
                         opacity: isVisible ? 1 : 0,
@@ -369,7 +369,7 @@ const Benefits = () => {
                     {/* Enhanced Bottom Section with sophisticated reveal animations */}
                     <div>
                       <div 
-                        className={`h-1.5 bg-gradient-to-r ${benefit.gradient} rounded-full mb-4 transition-all duration-700`}
+                        className={`h-1.5 bg-gradient-to-r ${benefit.gradient} rounded-full mb-3 sm:mb-4 transition-all duration-700`}
                         style={{
                           width: isVisible && cardState.inView ? '96px' : '0px',
                           opacity: isVisible ? 1 : 0,
@@ -378,7 +378,7 @@ const Benefits = () => {
                       ></div>
                     
                       <div 
-                        className={`flex items-center text-sm font-semibold transition-all duration-700 delay-200 ${
+                        className={`flex items-center text-sm sm:text-sm font-semibold transition-all duration-700 delay-200 ${
                           cardState.inView ? 'group-hover:opacity-100 group-hover:translate-x-2' : 'opacity-0 -translate-x-4'
                         }`}
                         style={{
@@ -388,8 +388,8 @@ const Benefits = () => {
                         }}
                       >
                         <span className={`text-${benefit.hoverColor}`}>Discover more benefits</span>
-                        <div className={`ml-3 w-8 h-8 bg-gradient-to-r ${benefit.gradient} rounded-full flex items-center justify-center group-hover:rotate-45 transition-transform duration-500`}>
-                          <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <div className={`ml-2 sm:ml-3 w-7 h-7 sm:w-8 sm:h-8 bg-gradient-to-r ${benefit.gradient} rounded-full flex items-center justify-center group-hover:rotate-45 transition-transform duration-500`}>
+                          <svg className="w-3 h-3 sm:w-4 sm:h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                           </svg>
                         </div>

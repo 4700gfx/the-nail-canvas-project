@@ -12,145 +12,206 @@ const Pricing = () => {
   const pricingData = {
     manicures: [
       {
-        name: "Classic Manicure",
-        description: "Experience our refined classic manicure, a gentle treatment that uses exfoliating nail bits to softly smooth and cleanse your nails and cuticles without the use of water. This method helps maintain nail strength and health while preparing your nails for a flawless finish.",
+        name: "Manicure",
+        description: "Classic nail care with expert shaping, cuticle treatment, and your choice of regular polish. Perfect for maintaining healthy, beautiful nails.",
         price: 30,
-        duration: "40 min",
+        duration: "45 min",
         popular: false,
-        features: ["Cuticle Treatment", "Hand Massage", "Base & Top Coat", "Polish Application"],
-        highlight: "Perfect for maintaining healthy, beautiful nails"
+        features: ["Nail Shaping", "Cuticle Care", "Hand Massage", "Regular Polish"],
+        highlight: "Timeless beauty and care"
+      },
+      {
+        name: "Manicure w/ Gel",
+        description: "Elevate your manicure with long-lasting gel polish that provides superior shine and chip-resistance for up to 2-3 weeks.",
+        price: 45,
+        duration: "60 min",
+        popular: true,
+        features: ["Nail Shaping", "Cuticle Treatment", "Hand Massage", "Gel Polish"],
+        highlight: "Our most popular choice - lasts weeks!"
       },
       {
         name: "Spa Manicure",
-        description: "Indulge in our rejuvenating manicure experience, beginning with a relaxing warm soak that softens your skin and nails. This is followed by an exfoliating scrub to gently polish away dryness, and a deeply moisturizing hand massage to nourish and soothe tired muscles.",
-        price: 45,
-        duration: "60 min", 
-        popular: true,
-        features: ["Long-lasting Formula", "UV/LED Curing", "Chip-resistant", "Mirror Shine Finish"],
-        highlight: "Our most popular choice - lasts 2-3 weeks!"
+        description: "Indulge in a luxurious experience with warm soak, exfoliating scrub, hydrating mask, and extended massage for ultimate relaxation.",
+        price: 40,
+        duration: "60 min",
+        popular: false,
+        features: ["Warm Soak", "Exfoliating Scrub", "Hydrating Mask", "Extended Massage"],
+        highlight: "Pure pampering for your hands"
       },
       {
-        name: "Russian Manicure",
-        description: "Experience the precision and elegance of our Russian Manicure, a meticulous technique that focuses on perfect cuticle care and nail shaping using specialized tools. This advanced method ensures flawless nail preparation, creating a clean, polished canvas that extends the life of your manicure.",
-        price: 50,
-        duration: "85 min",
+        name: "Spa Manicure w/ Gel",
+        description: "The ultimate combination of spa luxury and long-lasting gel polish. Enjoy premium pampering with weeks of perfect color.",
+        price: 55,
+        duration: "75 min",
         popular: false,
-        features: ["Precision White Tips", "Custom Base Color", "Hand Buffing", "Professional Finish"],
-        highlight: "Timeless elegance that never goes out of style"
+        features: ["Spa Treatment", "Premium Products", "Gel Polish", "Extended Care"],
+        highlight: "Luxury meets longevity"
       },
       {
-        name: "Long Full Set",
-        description: "Immerse yourself in pure indulgence with our signature spa experience. This premium treatment includes aromatic soaks, gentle exfoliation, hydrating masks, and an extended relaxation massage that transforms your hands into silk.",
-        price: 75,
-        duration: "90 min",
+        name: "MANicure",
+        description: "Designed specifically for men's nails and hands. Professional grooming with nail trimming, buffing, and cuticle care.",
+        price: 25,
+        duration: "40 min",
         popular: false,
-        features: ["Aromatherapy Soak", "Sugar Scrub Exfoliation", "Hydrating Mask", "Extended Massage"],
-        highlight: "The ultimate pampering experience for your hands"
+        features: ["Nail Trimming", "Buffing", "Cuticle Care", "Hand Treatment"],
+        highlight: "Professional grooming for men"
+      },
+      {
+        name: "MANicure w/ Gel",
+        description: "Men's professional nail care enhanced with clear or natural gel for a polished, well-groomed appearance that lasts.",
+        price: 40,
+        duration: "55 min",
+        popular: false,
+        features: ["Professional Grooming", "Gel Treatment", "Natural Finish", "Long-lasting"],
+        highlight: "Refined and sophisticated"
       }
     ],
     pedicures: [
       {
-        name: "Classic Pedicure",
-        description: "Treat your feet to essential luxury with our comprehensive foot care ritual. Featuring a relaxing soak, thorough cleansing, callus removal, nail shaping, and a beautiful polish finish that leaves you walking on clouds.",
+        name: "Basic Pedicure",
+        description: "Essential foot care with warm soak, nail trimming, callus removal, and your choice of regular polish for beautiful, healthy feet.",
         price: 35,
-        duration: "60 min",
+        duration: "50 min",
         popular: false,
-        features: ["Warm Foot Soak", "Callus Removal", "Nail Trimming", "Moisturizing Treatment"],
-        highlight: "Essential foot care for healthy, beautiful feet"
+        features: ["Warm Soak", "Nail Trimming", "Callus Removal", "Regular Polish"],
+        highlight: "Essential foot care"
       },
       {
-        name: "Gel Pedicure", 
-        description: "Elevate your pedicure with our long-lasting gel formula that withstands everything from beach days to workout sessions. Enjoy weeks of perfect color with a mirror-like finish that maintains its brilliance.",
+        name: "Basic Pedicure w/ Gel",
+        description: "Classic pedicure enhanced with chip-resistant gel polish that keeps your toes looking perfect for 3-4 weeks.",
+        price: 50,
+        duration: "65 min",
+        popular: true,
+        features: ["Complete Foot Care", "Gel Polish", "Extended Wear", "Mirror Finish"],
+        highlight: "Perfect for active lifestyles"
+      },
+      {
+        name: "Deluxe Pedicure",
+        description: "Premium foot spa experience with sugar scrub exfoliation, hydrating mask, hot stone massage, and extended pampering.",
         price: 50,
         duration: "75 min",
-        popular: true,
-        features: ["Durable Gel Polish", "Extended Wear", "High-gloss Finish", "Chip-resistant Formula"],
-        highlight: "Perfect for active lifestyles - lasts 3-4 weeks!"
+        popular: false,
+        features: ["Sugar Scrub", "Hydrating Mask", "Hot Stone Massage", "Premium Care"],
+        highlight: "Ultimate foot indulgence"
       },
       {
-        name: "Deluxe Spa Pedicure w/ Polish",
-        description: "Escape into paradise with our ultimate foot spa journey. Hot stone therapy melts away tension while paraffin treatments deeply nourish your skin. This transformative experience includes extended massage and premium products.",
-        price: 60,
+        name: "Deluxe Pedicure w/ Gel",
+        description: "Our most luxurious pedicure combining spa-quality treatments with long-lasting gel polish for the ultimate foot transformation.",
+        price: 65,
         duration: "90 min",
         popular: false,
-        features: ["Hot Stone Therapy", "Paraffin Treatment", "Sea Salt Scrub", "Reflexology Massage"],
-        highlight: "Pure bliss - our most indulgent foot treatment"
-      },
-      {
-        name: "Polygel Full Set Pedicure",
-        description: "Elevate your pedicure with our Polygel Toes Full Set, combining the strength and flexibility of gel with the lightweight comfort of acrylic. This innovative nail enhancement sculpts and extends your toenails to perfection, delivering a natural yet flawless look.",
-        price: 55,
-        duration: "75 min",
-        popular: false,
-        features: ["Therapeutic Treatment", "Problem Nail Care", "Callus Removal", "Health Assessment"],
-        highlight: "Professional care for challenging foot conditions"
+        features: ["Deluxe Spa Treatment", "Gel Polish", "Hot Stone Therapy", "Extended Massage"],
+        highlight: "Pure bliss for your feet"
       }
     ],
     extensions: [
       {
-        name: "Gel Extensions - Short",
-        description: "Perfect for the professional who desires subtle elegance. Our short gel extensions add just the right amount of length and strength while maintaining a natural appearance that's ideal for everyday activities.",
-        price: 50,
+        name: "Short Full Set",
+        description: "Professional gel extensions in a natural short length. Perfect for those who want subtle elegance and strength.",
+        price: 60,
         duration: "120 min",
         popular: false,
-        features: ["Natural Length", "Custom Shape", "Reinforced Strength", "Professional Appearance"],
-        highlight: "Ideal for professional environments and daily wear"
+        features: ["Custom Shape", "Natural Length", "Reinforced Strength", "Professional Finish"],
+        highlight: "Ideal for everyday elegance"
       },
       {
-        name: "Gel Extensions - Medium",
-        description: "Strike the perfect balance between practicality and glamour. These medium-length extensions offer versatility for both work and play, providing elegant length that's comfortable and stunning for any occasion.",
-        price: 55,
+        name: "Medium Full Set",
+        description: "Versatile medium-length extensions that strike the perfect balance between practicality and glamour for any occasion.",
+        price: 70,
         duration: "135 min",
         popular: true,
-        features: ["Versatile Length", "Comfortable Wear", "Elegant Appearance", "Durable Construction"],
-        highlight: "The perfect length for any lifestyle - our top choice!"
+        features: ["Versatile Length", "Custom Design", "Durable Build", "Show-stopping Shine"],
+        highlight: "The perfect length - most popular!"
       },
       {
-        name: "Gel Extensions - Long",
-        description: "Make a bold statement with our dramatic long extensions that command attention. Crafted for those who love to showcase their style, these extensions offer maximum impact with superior strength and breathtaking beauty.",
-        price: 65,
+        name: "Long Full Set",
+        description: "Dramatic long extensions for those who love to make a statement. Maximum length with superior strength and beauty.",
+        price: 80,
         duration: "150 min",
         popular: false,
-        features: ["Statement Length", "Maximum Impact", "Superior Strength", "Show-stopping Appeal"],
-        highlight: "For those who dare to be bold and beautiful"
+        features: ["Statement Length", "Bold Impact", "Maximum Strength", "Glamorous Finish"],
+        highlight: "For the bold and beautiful"
       },
       {
-        name: "Extension Fill-In",
-        description: "Maintain your gorgeous extensions with our professional fill-in service. We refresh the growth area, reinforce the structure, and perfect the shape to keep your nails looking freshly done between full appointments.",
-        price: 75,
+        name: "Extra Long Full Set",
+        description: "Our most dramatic extension service. Ultra-long nails crafted with precision for those who demand show-stopping impact.",
+        price: 95,
+        duration: "165 min",
+        popular: false,
+        features: ["Ultra-Long Length", "Maximum Drama", "Expert Construction", "Unforgettable Style"],
+        highlight: "Ultimate glamour and drama"
+      },
+      {
+        name: "Short Fill",
+        description: "Maintain your short gel extensions with professional fill-in service. Refresh growth area and perfect the shape.",
+        price: 40,
+        duration: "75 min",
+        popular: false,
+        features: ["Growth Area Fill", "Shape Maintenance", "Polish Refresh", "Strength Check"],
+        highlight: "Keep them looking fresh"
+      },
+      {
+        name: "Medium Fill",
+        description: "Professional maintenance for your medium extensions. We'll fill, reshape, and refresh for continued perfection.",
+        price: 50,
         duration: "90 min",
         popular: false,
-        features: ["Growth Area Refresh", "Structure Reinforcement", "Shape Perfection", "Color Touch-up"],
-        highlight: "Keep your extensions looking perfect between visits"
-      }
-    ],
-    nailart: [
-      {
-        name: "Simple Nail Art",
-        description: "Add a touch of personality with our charming simple designs. Perfect for accent nails or subtle patterns, these artistic touches enhance your manicure with clean lines, geometric shapes, or delicate details.",
-        price: 15,
-        duration: "30 min",
-        popular: false,
-        features: ["Accent Nail Designs", "Geometric Patterns", "Clean Lines", "Subtle Enhancement"],
-        highlight: "Perfect way to add personality to your manicure"
+        features: ["Complete Fill-in", "Reshaping", "Structure Check", "Color Refresh"],
+        highlight: "Maintain your perfect look"
       },
       {
-        name: "Custom Nail Art",
-        description: "Transform your nails into personal masterpieces with our bespoke artwork. Each design is hand-painted with precision, featuring intricate details, custom colors, and artistic flair that reflects your unique style and vision.",
-        price: 35,
-        duration: "60 min",
-        popular: true,
-        features: ["Hand-painted Designs", "Custom Colors", "Intricate Details", "Personal Consultation"],
-        highlight: "Your vision brought to life by our skilled artists"
+        name: "Long Fill",
+        description: "Expert fill-in service for long extensions. Restore strength, perfect the shape, and maintain your dramatic length.",
+        price: 60,
+        duration: "105 min",
+        popular: false,
+        features: ["Growth Fill", "Length Maintenance", "Reinforcement", "Polish Update"],
+        highlight: "Keep the drama alive"
       },
       {
-        name: "Full Set Artwork",
-        description: "Commission a complete nail art collection with our most comprehensive artistic service. Every nail becomes a canvas for intricate storytelling, featuring cohesive themes, premium materials, and museum-quality attention to detail.",
-        price: 95,
-        duration: "150 min",
+        name: "Extra Long Fill",
+        description: "Specialized maintenance for ultra-long extensions. Comprehensive care to keep your statement nails flawless.",
+        price: 70,
+        duration: "120 min",
         popular: false,
-        features: ["Complete Art Collection", "Cohesive Themes", "Premium Materials", "Museum-quality Detail"],
-        highlight: "The ultimate artistic expression - every nail a masterpiece"
+        features: ["Complete Maintenance", "Ultra-Long Care", "Structure Reinforcement", "Perfect Finish"],
+        highlight: "Preserve your dramatic look"
+      },
+      {
+        name: "Short Rebalance",
+        description: "Complete rebalancing service for short extensions. Restore structure, correct shape, and ensure optimal nail health.",
+        price: 50,
+        duration: "90 min",
+        popular: false,
+        features: ["Structure Correction", "Shape Restoration", "Product Reapplication", "Health Check"],
+        highlight: "Restore and perfect"
+      },
+      {
+        name: "Medium Rebalance",
+        description: "Full rebalancing treatment for medium extensions. Comprehensive restoration of shape, strength, and beauty.",
+        price: 60,
+        duration: "105 min",
+        popular: false,
+        features: ["Complete Rebalance", "Structure Rebuild", "Shape Correction", "Full Restoration"],
+        highlight: "Comprehensive renewal"
+      },
+      {
+        name: "Long Rebalance",
+        description: "Expert rebalancing for long extensions. Extensive care to restore integrity and beauty to your dramatic length.",
+        price: 70,
+        duration: "120 min",
+        popular: false,
+        features: ["Full Structure Reset", "Length Correction", "Strength Restoration", "Complete Refresh"],
+        highlight: "Complete transformation"
+      },
+      {
+        name: "Extra Long Rebalance",
+        description: "Premium rebalancing service for ultra-long extensions. Meticulous restoration to maintain show-stopping perfection.",
+        price: 85,
+        duration: "135 min",
+        popular: false,
+        features: ["Ultra-Long Rebalance", "Complete Reconstruction", "Maximum Care", "Flawless Finish"],
+        highlight: "Ultimate restoration"
       }
     ]
   };
@@ -158,12 +219,11 @@ const Pricing = () => {
   const categories = [
     { id: 'manicures', name: 'Manicures', icon: '💅', desc: 'Hand Perfection' },
     { id: 'pedicures', name: 'Pedicures', icon: '🌺', desc: 'Foot Luxury' },
-    { id: 'extensions', name: 'Extensions', icon: '✨', desc: 'Length & Strength' },
-    { id: 'nailart', name: 'Nail Art', icon: '🎨', desc: 'Artistic Expression' }
+    { id: 'extensions', name: 'Extensions + Fills', icon: '✨', desc: 'Length & Strength' }
   ];
 
   return (
-    <section className="min-h-screen relative overflow-hidden py-20">
+    <section className="min-h-screen relative overflow-hidden py-12 sm:py-16 lg:py-20">
       <style jsx>{`
         @keyframes fadeInUp {
           from {
@@ -269,7 +329,6 @@ const Pricing = () => {
           box-shadow: 0 0 30px rgba(244, 188, 204, 0.4), 0 25px 50px -12px rgba(0, 0, 0, 0.15);
         }
 
-        /* Use colors from Navbar component */
         .bg-canvas-pink { background-color: #F4BCCC; }
         .bg-canvas-brown { background-color: #5C2314; }
         .bg-canvas-white { background-color: #FFF9F7; }
@@ -285,147 +344,146 @@ const Pricing = () => {
         .tenor-font { font-family: 'Tenor Sans', serif; }
       `}</style>
 
-      {/* Animated Background accents - updated with navbar colors */}
-      <div className="absolute top-0 right-0 w-96 h-96 bg-gradient-to-bl from-pink-200 to-transparent rounded-full blur-3xl animate-float" style={{background: 'radial-gradient(circle, rgba(244, 188, 204, 0.12) 0%, transparent 70%)'}}></div>
-      <div className="absolute bottom-0 left-0 w-80 h-80 bg-gradient-to-tr from-yellow-800 to-transparent rounded-full blur-3xl animate-float" style={{animationDelay: '2s', background: 'radial-gradient(circle, rgba(92, 35, 20, 0.1) 0%, transparent 70%)'}}></div>
-      <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 rounded-full blur-3xl animate-float" style={{animationDelay: '4s', background: 'radial-gradient(circle, rgba(255, 195, 215, 0.08) 0%, rgba(92, 35, 20, 0.05) 100%)'}}></div>
+      {/* Animated Background accents */}
+      <div className="absolute top-0 right-0 w-64 sm:w-80 lg:w-96 h-64 sm:h-80 lg:h-96 bg-gradient-to-bl from-pink-200 to-transparent rounded-full blur-3xl animate-float" style={{background: 'radial-gradient(circle, rgba(244, 188, 204, 0.12) 0%, transparent 70%)'}}></div>
+      <div className="absolute bottom-0 left-0 w-56 sm:w-72 lg:w-80 h-56 sm:h-72 lg:h-80 bg-gradient-to-tr from-yellow-800 to-transparent rounded-full blur-3xl animate-float" style={{animationDelay: '2s', background: 'radial-gradient(circle, rgba(92, 35, 20, 0.1) 0%, transparent 70%)'}}></div>
+      <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 sm:w-80 lg:w-96 h-64 sm:h-80 lg:h-96 rounded-full blur-3xl animate-float" style={{animationDelay: '4s', background: 'radial-gradient(circle, rgba(255, 195, 215, 0.08) 0%, rgba(92, 35, 20, 0.05) 100%)'}}></div>
 
-      <div className="w-[90%] mx-auto px-6 lg:px-8">
+      <div className="w-[95%] sm:w-[90%] mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Enhanced Header Section */}
-        <div className={`text-center mb-20 ${mounted ? 'animate-fadeInUp' : 'opacity-0'}`}>
-          <div className="space-y-6 mb-12">
-            <h1 className="maharlika-font text-7xl lg:text-8xl leading-none text-gradient">
+        <div className={`text-center mb-12 sm:mb-16 lg:mb-20 ${mounted ? 'animate-fadeInUp' : 'opacity-0'}`}>
+          <div className="space-y-4 sm:space-y-6 mb-8 sm:mb-12">
+            <h1 className="maharlika-font text-5xl sm:text-6xl lg:text-7xl xl:text-8xl leading-none text-gradient">
               Pricing
             </h1>
-            <h2 className="breathing-font text-3xl lg:text-4xl font-semibold text-canvas-brown leading-none">
+            <h2 className="breathing-font text-2xl sm:text-3xl lg:text-4xl font-semibold text-canvas-brown leading-tight px-4">
               Luxury Services + Transparent Pricing
             </h2>
           </div>
           
-          <div className="flex items-center justify-center space-x-4 mb-8">
-            <div className="h-px w-16 bg-gradient-to-r from-pink-300 to-red-900"></div>
-            <span className="breathing-font text-2xl text-canvas-black">Premium Care for Every Budget</span>
-            <span className="text-2xl">💎</span>
-            <div className="h-px w-16 bg-gradient-to-l from-pink-300 to-red-900"></div>
+          <div className="flex flex-col sm:flex-row items-center justify-center sm:space-x-4 space-y-2 sm:space-y-0 mb-6 sm:mb-8 px-4">
+            <div className="h-px w-12 sm:w-16 bg-gradient-to-r from-pink-300 to-red-900 hidden sm:block"></div>
+            <span className="breathing-font text-lg sm:text-xl lg:text-2xl text-canvas-black text-center">Premium Care for Every Budget</span>
+            <span className="text-xl sm:text-2xl">💎</span>
+            <div className="h-px w-12 sm:w-16 bg-gradient-to-l from-pink-300 to-red-900 hidden sm:block"></div>
           </div>
           
-          <p className="tenor-font text-lg text-canvas-black max-w-3xl mx-auto leading-relaxed">
-            Experience the artistry of professional nail care with our comprehensive menu of services. Each treatment is carefully crafted to deliver exceptional results that exceed your expectations. Discover the perfect service for your style and schedule below.
+          <p className="tenor-font text-sm sm:text-base lg:text-lg text-canvas-black max-w-3xl mx-auto leading-relaxed px-4">
+            Experience the artistry of professional nail care with our comprehensive menu of services. Each treatment is carefully crafted to deliver exceptional results that exceed your expectations.
           </p>
         </div>
 
         {/* Enhanced Category Navigation */}
-        <div className={`bg-canvas-white rounded-3xl sleek-shadow p-8 mb-16 max-w-5xl mx-auto ${mounted ? 'animate-fadeIn stagger-2' : 'opacity-0'}`}>
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
+        <div className={`bg-canvas-white rounded-2xl sm:rounded-3xl sleek-shadow p-4 sm:p-6 lg:p-8 mb-12 sm:mb-16 max-w-5xl mx-auto ${mounted ? 'animate-fadeIn stagger-2' : 'opacity-0'}`}>
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-4">
             {categories.map((category, index) => (
               <button
                 key={category.id}
                 onClick={() => setActiveCategory(category.id)}
-                className={`group p-6 rounded-2xl font-semibold transition-all duration-500 transform ${
+                className={`group p-4 sm:p-5 lg:p-6 rounded-xl sm:rounded-2xl font-semibold transition-all duration-500 transform ${
                   activeCategory === category.id
                     ? 'bg-canvas-pink text-white shadow-lg scale-105 animate-shimmer'
                     : 'text-canvas-brown hover:scale-102'
                 }`}
                 style={{
                   animationDelay: `${index * 0.1}s`,
-                  backgroundColor: activeCategory === category.id ? '#F4BCCC' : 'rgba(244, 188, 204, 0.08)',
-                  ':hover': activeCategory !== category.id ? { backgroundColor: 'rgba(244, 188, 204, 0.12)' } : {}
+                  backgroundColor: activeCategory === category.id ? '#F4BCCC' : 'rgba(244, 188, 204, 0.08)'
                 }}
               >
-                <div className="text-center space-y-2 transition-all duration-300">
-                  <div className={`text-3xl mb-2 transition-transform duration-300 ${activeCategory === category.id ? 'animate-bounce' : 'group-hover:scale-110'}`}>
+                <div className="text-center space-y-1 sm:space-y-2 transition-all duration-300">
+                  <div className={`text-2xl sm:text-3xl mb-1 sm:mb-2 transition-transform duration-300 ${activeCategory === category.id ? 'animate-bounce' : 'group-hover:scale-110'}`}>
                     {category.icon}
                   </div>
-                  <div className="breathing-font text-lg">{category.name}</div>
-                  <div className="tenor-font text-sm opacity-80">{category.desc}</div>
+                  <div className="breathing-font text-base sm:text-lg">{category.name}</div>
+                  <div className="tenor-font text-xs sm:text-sm opacity-80">{category.desc}</div>
                 </div>
               </button>
             ))}
           </div>
         </div>
 
-        {/* Enhanced Pricing Grid */}
-        <div className="grid md:grid-cols-2 xl:grid-cols-2 gap-8 max-w-6xl mx-auto mb-16">
+        {/* Enhanced Pricing Grid - Responsive */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-6 lg:gap-8 max-w-6xl mx-auto mb-12 sm:mb-16">
           {pricingData[activeCategory].map((service, index) => (
             <div
               key={`${activeCategory}-${index}`}
-              className={`group relative bg-canvas-white rounded-3xl p-8 sleek-shadow card-hover transition-all duration-500 overflow-hidden ${
+              className={`group relative bg-canvas-white rounded-2xl sm:rounded-3xl p-5 sm:p-6 lg:p-8 sleek-shadow card-hover transition-all duration-500 overflow-hidden ${
                 service.popular ? 'border-2 border-canvas-pink popular-glow' : ''
               } ${mounted ? 'animate-slideIn' : 'opacity-0'}`}
               style={{animationDelay: `${index * 0.1 + 0.3}s`}}
               onMouseEnter={() => setHoveredService(index)}
               onMouseLeave={() => setHoveredService(null)}
             >
-              {/* Popular Badge - Fixed positioning */}
+              {/* Popular Badge */}
               {service.popular && (
-                <div className="absolute -top-3 left-1/2 transform -translate-x-1/2 popular-badge">
-                  <div className="bg-canvas-pink text-white px-6 py-2 rounded-full text-sm font-bold shadow-lg whitespace-nowrap animate-bounce">
+                <div className="absolute -top-2.5 sm:-top-3 left-1/2 transform -translate-x-1/2 popular-badge">
+                  <div className="bg-canvas-pink text-white px-4 sm:px-6 py-1.5 sm:py-2 rounded-full text-xs sm:text-sm font-bold shadow-lg whitespace-nowrap animate-bounce">
                     ⭐ Most Popular
                   </div>
                 </div>
               )}
 
-              {/* Background decoration with animation */}
-              <div className={`absolute top-0 right-0 w-32 h-32 rounded-full blur-2xl transform translate-x-16 -translate-y-16 transition-all duration-500 ${hoveredService === index ? 'scale-150 opacity-100' : 'opacity-50'}`} style={{backgroundColor: 'rgba(244, 188, 204, 0.15)'}}></div>
-              <div className={`absolute bottom-0 left-0 w-24 h-24 rounded-full blur-xl transform -translate-x-12 translate-y-12 transition-all duration-500 ${hoveredService === index ? 'scale-125 opacity-100' : 'opacity-50'}`} style={{backgroundColor: 'rgba(92, 35, 20, 0.1)'}}></div>
+              {/* Background decoration */}
+              <div className={`absolute top-0 right-0 w-24 sm:w-32 h-24 sm:h-32 rounded-full blur-2xl transform translate-x-12 sm:translate-x-16 -translate-y-12 sm:-translate-y-16 transition-all duration-500 ${hoveredService === index ? 'scale-150 opacity-100' : 'opacity-50'}`} style={{backgroundColor: 'rgba(244, 188, 204, 0.15)'}}></div>
+              <div className={`absolute bottom-0 left-0 w-20 sm:w-24 h-20 sm:h-24 rounded-full blur-xl transform -translate-x-10 sm:-translate-x-12 translate-y-10 sm:translate-y-12 transition-all duration-500 ${hoveredService === index ? 'scale-125 opacity-100' : 'opacity-50'}`} style={{backgroundColor: 'rgba(92, 35, 20, 0.1)'}}></div>
 
               {/* Service Content */}
-              <div className={`relative z-10 space-y-6 ${service.popular ? 'mt-4' : ''}`}>
+              <div className={`relative z-10 space-y-4 sm:space-y-5 lg:space-y-6 ${service.popular ? 'mt-3 sm:mt-4' : ''}`}>
                 {/* Header */}
-                <div className="space-y-4">
-                  <h3 className="breathing-font text-2xl lg:text-3xl font-bold text-canvas-brown leading-tight transition-colors duration-300 group-hover:text-red-800">
+                <div className="space-y-2 sm:space-y-3 lg:space-y-4">
+                  <h3 className="breathing-font text-xl sm:text-2xl lg:text-3xl font-bold text-canvas-brown leading-tight transition-colors duration-300 group-hover:text-red-800">
                     {service.name}
                   </h3>
-                  <div className="inline-block px-4 py-2 rounded-full transition-all duration-300" style={{backgroundColor: 'rgba(244, 188, 204, 0.12)', ':hover': {backgroundColor: 'rgba(244, 188, 204, 0.18)'}}}>
-                    <span className="tenor-font text-sm text-canvas-brown font-medium">
+                  <div className="inline-block px-3 sm:px-4 py-1.5 sm:py-2 rounded-full transition-all duration-300" style={{backgroundColor: 'rgba(244, 188, 204, 0.12)'}}>
+                    <span className="tenor-font text-xs sm:text-sm text-canvas-brown font-medium">
                       {service.highlight}
                     </span>
                   </div>
                 </div>
 
                 {/* Description */}
-                <p className="tenor-font text-base text-canvas-black leading-relaxed transition-all duration-300 group-hover:text-gray-700">
+                <p className="tenor-font text-sm sm:text-base text-canvas-black leading-relaxed transition-all duration-300 group-hover:text-gray-700">
                   {service.description}
                 </p>
 
                 {/* Features */}
                 <div className="space-y-2">
-                  <h4 className="breathing-font text-sm font-semibold text-canvas-brown tracking-wider">
+                  <h4 className="breathing-font text-xs sm:text-base font-semibold text-canvas-brown tracking-wider">
                     What's Included:
                   </h4>
-                  <div className="grid grid-cols-2 gap-2">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-1.5 sm:gap-2">
                     {service.features.map((feature, idx) => (
                       <div key={idx} className="flex items-center space-x-2 transition-all duration-300 hover:translate-x-1">
-                        <span className="text-canvas-pink text-sm transition-transform duration-300 hover:scale-110">✓</span>
-                        <span className="tenor-font text-sm text-canvas-black">{feature}</span>
+                        <span className="text-canvas-pink text-xs sm:text-sm transition-transform duration-300 hover:scale-110">✓</span>
+                        <span className="tenor-font text-xs sm:text-sm text-canvas-black">{feature}</span>
                       </div>
                     ))}
                   </div>
                 </div>
 
                 {/* Price and Duration */}
-                <div className={`flex items-center justify-between p-4 rounded-2xl transition-all duration-300 ${hoveredService === index ? 'shadow-md' : ''}`} style={{backgroundColor: hoveredService === index ? 'rgba(244, 188, 204, 0.18)' : 'rgba(244, 188, 204, 0.12)'}}>
-                  <div className="space-y-1">
-                    <div className="maharlika-font text-4xl font-bold text-canvas-brown transition-all duration-300 group-hover:scale-110 group-hover:text-red-800">
+                <div className={`flex items-center justify-between p-3 sm:p-4 rounded-xl sm:rounded-2xl transition-all duration-300 ${hoveredService === index ? 'shadow-md' : ''}`} style={{backgroundColor: hoveredService === index ? 'rgba(244, 188, 204, 0.18)' : 'rgba(244, 188, 204, 0.12)'}}>
+                  <div className="space-y-0.5 sm:space-y-1">
+                    <div className="maharlika-font text-3xl sm:text-4xl font-bold text-canvas-brown transition-all duration-300 group-hover:scale-110 group-hover:text-red-800">
                       ${service.price}
                     </div>
-                    <div className="tenor-font text-sm text-canvas-black">
+                    <div className="tenor-font text-xs sm:text-sm text-canvas-black">
                       Starting price
                     </div>
                   </div>
-                  <div className="text-right space-y-1">
-                    <div className="tenor-font text-3xl font-italic text-canvas-brown transition-all duration-300 group-hover:text-red-800">
+                  <div className="text-right space-y-0.5 sm:space-y-1">
+                    <div className="tenor-font text-2xl sm:text-3xl font-italic text-canvas-brown transition-all duration-300 group-hover:text-red-800">
                       {service.duration}
                     </div>
-                    <div className="tenor-font text-sm text-canvas-black">
+                    <div className="tenor-font text-xs sm:text-sm text-canvas-black">
                       Treatment time
                     </div>
                   </div>
                 </div>
 
                 {/* Book Button */}
-                <button className={`w-full py-4 px-6 rounded-2xl font-semibold text-lg transition-all duration-500 transform hover:scale-105 hover:-translate-y-1 ${
+                <button className={`w-full py-3 sm:py-4 px-4 sm:px-6 rounded-xl sm:rounded-2xl font-semibold text-base sm:text-lg transition-all duration-500 transform hover:scale-105 hover:-translate-y-1 ${
                   service.popular
                     ? 'bg-canvas-pink text-white hover:bg-red-300 shadow-lg hover:shadow-xl'
                     : 'bg-canvas-brown text-white hover:bg-canvas-black shadow-md hover:shadow-lg'
@@ -435,7 +493,7 @@ const Pricing = () => {
               </div>
 
               {/* Hover glow effect */}
-              <div className={`absolute inset-0 rounded-3xl transition-all duration-500 ${
+              <div className={`absolute inset-0 rounded-2xl sm:rounded-3xl transition-all duration-500 ${
                 hoveredService === index ? 'opacity-20' : 'opacity-0'
               }`} style={{background: 'linear-gradient(135deg, rgba(244, 188, 204, 0.1), rgba(92, 35, 20, 0.1))'}}></div>
             </div>
@@ -443,49 +501,48 @@ const Pricing = () => {
         </div>
 
         {/* Enhanced Bottom CTA Section */}
-        <div className={`bg-canvas-brown rounded-3xl p-12 text-center sleek-shadow relative overflow-hidden ${mounted ? 'animate-fadeInUp stagger-4' : 'opacity-0'}`}>
-          {/* Animated background decorations */}
-          <div className="absolute top-0 right-0 w-40 h-40 opacity-20 rounded-full blur-2xl animate-float" style={{backgroundColor: 'rgb(244, 188, 204)'}}></div>
-          <div className="absolute bottom-0 left-0 w-32 h-32 opacity-20 rounded-full blur-xl animate-float" style={{animationDelay: '3s', backgroundColor: 'rgb(92, 35, 20)'}}></div>
+        <div className={`bg-canvas-brown rounded-2xl sm:rounded-3xl p-6 sm:p-8 lg:p-12 text-center sleek-shadow relative overflow-hidden ${mounted ? 'animate-fadeInUp stagger-4' : 'opacity-0'}`}>
+          <div className="absolute top-0 right-0 w-32 sm:w-40 h-32 sm:h-40 opacity-20 rounded-full blur-2xl animate-float" style={{backgroundColor: 'rgb(244, 188, 204)'}}></div>
+          <div className="absolute bottom-0 left-0 w-24 sm:w-32 h-24 sm:h-32 opacity-20 rounded-full blur-xl animate-float" style={{animationDelay: '3s', backgroundColor: 'rgb(92, 35, 20)'}}></div>
           
-          <div className="relative z-10 space-y-8">
-            <div className="space-y-4">
-              <h3 className="maharlika-font text-4xl lg:text-5xl font-bold text-canvas-white">
+          <div className="relative z-10 space-y-6 sm:space-y-8">
+            <div className="space-y-3 sm:space-y-4">
+              <h3 className="maharlika-font text-3xl sm:text-4xl lg:text-5xl font-bold text-canvas-white">
                 Ready to Experience Luxury?
               </h3>
-              <div className="flex items-center justify-center space-x-4">
-                <div className="h-px w-12 bg-gradient-to-r from-pink-300 to-white"></div>
-                <span className="breathing-font text-xl text-canvas-pink">Your Perfect Nails Await</span>
-                <div className="h-px w-12 bg-gradient-to-l from-pink-300 to-white"></div>
+              <div className="flex items-center justify-center space-x-3 sm:space-x-4">
+                <div className="h-px w-8 sm:w-12 bg-gradient-to-r from-pink-300 to-white"></div>
+                <span className="breathing-font text-base sm:text-lg lg:text-xl text-canvas-pink">Your Perfect Nails Await</span>
+                <div className="h-px w-8 sm:w-12 bg-gradient-to-l from-pink-300 to-white"></div>
               </div>
             </div>
             
-            <p className="tenor-font text-lg text-canvas-white max-w-2xl mx-auto leading-relaxed">
-              Transform your nails into works of art with our expert care and premium services. Book your appointment today and discover why discerning clients choose The Nail Canvas for their beauty needs.
+            <p className="tenor-font text-sm sm:text-base lg:text-lg text-canvas-white max-w-2xl mx-auto leading-relaxed px-4">
+              Transform your nails into works of art with our expert care and premium services. Book your appointment today and discover why discerning clients choose The Nail Canvas.
             </p>
             
-            <div className="flex flex-col sm:flex-row gap-6 justify-center pt-4">
-              <button className="bg-canvas-pink px-10 py-4 rounded-full font-bold text-white text-lg transition-all duration-300 transform hover:scale-105 hover:-translate-y-1 shadow-lg hover:shadow-xl">
+            <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center pt-2 sm:pt-4">
+              <button className="bg-canvas-pink px-6 sm:px-8 lg:px-10 py-3 sm:py-4 rounded-full font-bold text-white text-base sm:text-lg transition-all duration-300 transform hover:scale-105 hover:-translate-y-1 shadow-lg hover:shadow-xl">
                 Book Your Appointment Now
               </button>
-              <button className="bg-canvas-white px-10 py-4 rounded-full font-bold text-canvas-brown transition-all duration-300 transform hover:scale-105 hover:-translate-y-1 shadow-lg hover:shadow-xl hover:bg-gray-50">
+              <button className="bg-canvas-white px-6 sm:px-8 lg:px-10 py-3 sm:py-4 rounded-full font-bold text-canvas-brown text-base sm:text-lg transition-all duration-300 transform hover:scale-105 hover:-translate-y-1 shadow-lg hover:shadow-xl hover:bg-gray-50">
                 Call (555) 123-NAILS
               </button>
             </div>
 
-            {/* Trust indicators with staggered animation */}
-            <div className="grid grid-cols-3 gap-8 pt-8 border-t border-white border-opacity-20">
+            {/* Trust indicators */}
+            <div className="grid grid-cols-3 gap-4 sm:gap-6 lg:gap-8 pt-6 sm:pt-8 border-t border-white border-opacity-20">
               <div className="text-center animate-fadeInUp stagger-1">
-                <div className="maharlika-font text-3xl font-bold text-canvas-pink mb-2 transition-transform duration-300 hover:scale-110">500+</div>
-                <div className="tenor-font text-sm text-canvas-white">Happy Clients</div>
+                <div className="maharlika-font text-2xl sm:text-3xl font-bold text-canvas-pink mb-1 sm:mb-2 transition-transform duration-300 hover:scale-110">500+</div>
+                <div className="tenor-font text-xs sm:text-sm text-canvas-white">Happy Clients</div>
               </div>
               <div className="text-center animate-fadeInUp stagger-2">
-                <div className="maharlika-font text-3xl font-bold text-canvas-pink mb-2 transition-transform duration-300 hover:scale-110">⭐ 5.0</div>
-                <div className="tenor-font text-sm text-canvas-white">Perfect Rating</div>
+                <div className="maharlika-font text-2xl sm:text-3xl font-bold text-canvas-pink mb-1 sm:mb-2 transition-transform duration-300 hover:scale-110">⭐ 5.0</div>
+                <div className="tenor-font text-xs sm:text-sm text-canvas-white">Perfect Rating</div>
               </div>
               <div className="text-center animate-fadeInUp stagger-3">
-                <div className="maharlika-font text-3xl font-bold text-canvas-pink mb-2 transition-transform duration-300 hover:scale-110">3+</div>
-                <div className="tenor-font text-sm text-canvas-white">Years Excellence</div>
+                <div className="maharlika-font text-2xl sm:text-3xl font-bold text-canvas-pink mb-1 sm:mb-2 transition-transform duration-300 hover:scale-110">3+</div>
+                <div className="tenor-font text-xs sm:text-sm text-canvas-white">Years Excellence</div>
               </div>
             </div>
           </div>
@@ -493,7 +550,7 @@ const Pricing = () => {
       </div>
 
       {/* Animated bottom decorative element */}
-      <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-px h-16 bg-gradient-to-b from-pink-300 to-transparent animate-fadeIn"></div>
+      <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-px h-12 sm:h-16 bg-gradient-to-b from-pink-300 to-transparent animate-fadeIn"></div>
     </section>
   );
 };
