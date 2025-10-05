@@ -438,21 +438,21 @@ const ContactMe = () => {
           <div className="bg-white rounded-2xl p-8 shadow-lg text-center">
             <div className="text-4xl mb-4">📞</div>
             <h4 className="font-bold text-amber-900 mb-2">Call Us</h4>
-            <p className="text-gray-700">(555) 123-NAILS</p>
-            <p className="text-sm text-gray-500 mt-2">Mon-Sat: 9AM-6PM</p>
+            <p className="text-gray-700">(912)-398-3353 </p>
+            <p className="text-sm text-gray-500 mt-2">Mon + Tues & Thurs - Sat: 9AM-6PM</p>
           </div>
           
           <div className="bg-white rounded-2xl p-8 shadow-lg text-center">
             <div className="text-4xl mb-4">📧</div>
             <h4 className="font-bold text-amber-900 mb-2">Email Us</h4>
-            <p className="text-gray-700">hello@nailcanvas.com</p>
+            <p className="text-gray-700">thenailcanvas912@gmail.com</p>
             <p className="text-sm text-gray-500 mt-2">We reply within 4 hours</p>
           </div>
           
           <div className="bg-white rounded-2xl p-8 shadow-lg text-center">
             <div className="text-4xl mb-4">📍</div>
             <h4 className="font-bold text-amber-900 mb-2">Visit Us</h4>
-            <p className="text-gray-700">123 Beauty Lane<br/>Miami, FL 33180</p>
+            <p className="text-gray-700">2515 MLK Blvd <br/>Savannah, GA 31415</p>
             <p className="text-sm text-gray-500 mt-2">Free parking available</p>
           </div>
         </div>

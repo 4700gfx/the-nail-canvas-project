@@ -82,13 +82,13 @@ const MeetMe = () => {
               <div className="relative z-10 text-center space-y-6">
                 {/* Profile Image Placeholder */}
                 <div className="mx-auto w-48 h-48 bg-gradient-to-br from-pink-200 to-amber-100 rounded-full flex items-center justify-center shadow-lg">
-                  <div className="text-6xl">👩‍🎨</div>
+                  <div className="text-6xl">💅🏽</div>
                 </div>
                 
                 <div>
                   <h3 className="text-2xl font-bold text-amber-900 mb-2">Melant Edenfield</h3>
                   <p className="text-lg text-pink-600 font-medium">Founder & Lead Artist</p>
-                  <p className="text-sm text-gray-600 mt-2">Miami, FL • Est. 2016</p>
+                  <p className="text-sm text-gray-600 mt-2">Savannah, GA • Est. 2016</p>
                 </div>
                 
                 <div className="pt-4 border-t border-gray-100">
@@ -307,10 +307,20 @@ const MeetMe = () => {
             
             <div className="flex flex-col sm:flex-row gap-6 justify-center pt-6">
               <button className="bg-white text-pink-600 px-10 py-4 rounded-full font-bold text-lg hover:bg-gray-50 transition-all duration-300 transform hover:scale-105 shadow-lg">
-                Book Your Consultation
+                  <a
+                  href='https://booksy.com/en-us/774723_the-nail-canvas_nail-salon_16218_savannah?do=invite&utm_medium=merchant_customer_invite'
+                  target='_blank'
+                  >
+                  Book Your Consultation 
+                  </a>
               </button>
-              <button className="border-2 border-white text-white px-10 py-4 rounded-full font-bold text-lg hover:bg-white hover:text-pink-600 transition-all duration-300 transform hover:scale-105">
-                Follow My Work on Instagram
+              <button className="border-2 border-white text-white px-10 py-4 rounded-full font-bold text-lg hover:bg-white hover:text-pink-600 transition-all duration-300 transform hover:scale-105">  
+              <a
+              href='https://www.instagram.com/nailgal_912/'
+              target='_blank'
+              >
+              Follow My Work on Instagram
+              </a>
               </button>
             </div>
           </div>

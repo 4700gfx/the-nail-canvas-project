@@ -11,9 +11,9 @@ const COLORS = {
 };
 
 const SOCIAL_MEDIA_LINKS = {
-  facebook: 'https://facebook.com/yourpage',
-  twitter: 'https://twitter.com/yourhandle',
-  instagram: 'https://instagram.com/yourhandle'
+  facebook: 'https://www.facebook.com/thenailcanvas912',
+  twitter: 'https://www.tiktok.com/@nailgal_912',
+  instagram: 'https://www.instagram.com/nailgal_912/'
 };
 
 const NAV_TABS = [
@@ -218,8 +218,8 @@ const Footer = () => {
                 <div>
                   <p className="text-sm font-medium" style={{ color: COLORS.background }}>Address</p>
                   <p className="text-sm" style={{ color: COLORS.accent }}>
-                    123 Beauty Lane<br />
-                    Miami, FL 33180
+                    2515 MLK Blvd <br />
+                    Savannah, Georgia 31415
                   </p>
                 </div>
               </div>
@@ -230,7 +230,7 @@ const Footer = () => {
                 </div>
                 <div>
                   <p className="text-sm font-medium" style={{ color: COLORS.background }}>Phone</p>
-                  <p className="text-sm" style={{ color: COLORS.accent }}>(555) 123-NAILS</p>
+                  <p className="text-sm" style={{ color: COLORS.accent }}>(912)-398-3353 </p>
                 </div>
               </div>
 
@@ -240,7 +240,7 @@ const Footer = () => {
                 </div>
                 <div>
                   <p className="text-sm font-medium" style={{ color: COLORS.background }}>Email</p>
-                  <p className="text-sm" style={{ color: COLORS.accent }}>hello@nailcanvas.com</p>
+                  <p className="text-sm" style={{ color: COLORS.accent }}>thenailcanvas912@gmail.com</p>
                 </div>
               </div>
 
@@ -251,8 +251,8 @@ const Footer = () => {
                 <div>
                   <p className="text-sm font-medium" style={{ color: COLORS.background }}>Hours</p>
                   <p className="text-sm" style={{ color: COLORS.accent }}>
-                    Mon-Sat: 9AM-6PM<br />
-                    Sunday: Closed
+                    Mon + Tues & Thurs - Sat: 9AM-6PM<br />
+                    Sunday & Wednesday: Closed
                   </p>
                 </div>
               </div>
@@ -309,7 +309,7 @@ const Footer = () => {
             
             <div className="flex items-center space-x-2">
               <span className="text-sm" style={{ color: COLORS.accent }}>Made with</span>
-              <span className="text-pink-400">💅</span>
+              <span className="text-pink-400">4700 GFX Studios 🌐</span>
               <span className="text-sm" style={{ color: COLORS.accent }}>in Miami</span>
             </div>
           </div>

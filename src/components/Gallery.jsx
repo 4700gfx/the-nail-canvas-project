@@ -413,10 +413,12 @@ const Gallery = () => {
               
               <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4">
                 <button className="bg-canvas-pink px-8 py-4 rounded-full font-semibold text-white text-lg hover-lift">
-                  Book Your Session
-                </button>
-                <button className="btn-secondary px-8 py-4 rounded-full font-semibold hover-lift">
+                  <a
+                  href='https://booksy.com/en-us/774723_the-nail-canvas_nail-salon_16218_savannah?do=invite&utm_medium=merchant_customer_invite'
+                  target='_blank'
+                  >
                   View Pricing
+                  </a>
                 </button>
               </div>
             </div>

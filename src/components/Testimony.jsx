@@ -458,10 +458,12 @@ const Testimony = () => {
               
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <button className="bg-canvas-pink px-8 py-3 rounded-full font-semibold text-white text-base card-hover shadow-lg">
-                  Book Your Experience
-                </button>
-                <button className="btn-secondary px-8 py-3 rounded-full font-semibold card-hover shadow-md">
-                  Read More Reviews
+                  <a
+                  href='https://booksy.com/en-us/774723_the-nail-canvas_nail-salon_16218_savannah?do=invite&utm_medium=merchant_customer_invite'
+                  target='_blank'
+                  >
+                  Book Your Experience  
+                  </a>
                 </button>
               </div>
 

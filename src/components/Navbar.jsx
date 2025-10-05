@@ -11,9 +11,9 @@ const COLORS = {
 };
 
 const SOCIAL_MEDIA_LINKS = {
-  facebook: 'https://facebook.com/yourpage',
-  twitter: 'https://twitter.com/yourhandle',
-  instagram: 'https://instagram.com/yourhandle'
+  facebook: 'https://www.facebook.com/thenailcanvas912',
+  twitter: 'https://www.tiktok.com/@nailgal_912',
+  instagram: 'https://www.instagram.com/nailgal_912/'
 };
 
 const NAV_TABS = [
@@ -179,7 +179,12 @@ const BookNowButton = ({onClick, className = ""}) =>(
     onClick={onClick}
     className={`flex items-center bg-canvas-black text-canvas-white space-x-2 px-6 py-3 rounded-2xl font-medium shadow-md transition-all duration-300 hover:shadow-lg hover:scale-105 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-400 ${className}`}
   >
+    <a
+    href='https://booksy.com/en-us/774723_the-nail-canvas_nail-salon_16218_savannah?do=invite&utm_medium=merchant_customer_invite'
+    target='_blank'
+    >
     Book Now
+    </a>
   </button>
 )
 

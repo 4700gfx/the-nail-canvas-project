@@ -488,7 +488,12 @@ const Pricing = () => {
                     ? 'bg-canvas-pink text-white hover:bg-red-300 shadow-lg hover:shadow-xl'
                     : 'bg-canvas-brown text-white hover:bg-canvas-black shadow-md hover:shadow-lg'
                 }`}>
-                  Book {service.name}
+                  <a
+                  href='https://booksy.com/en-us/774723_the-nail-canvas_nail-salon_16218_savannah?do=invite&utm_medium=merchant_customer_invite'
+                  target='_blank'
+                  >
+                    Book {service.name}
+                  </a>
                 </button>
               </div>
 
@@ -523,10 +528,12 @@ const Pricing = () => {
             
             <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center pt-2 sm:pt-4">
               <button className="bg-canvas-pink px-6 sm:px-8 lg:px-10 py-3 sm:py-4 rounded-full font-bold text-white text-base sm:text-lg transition-all duration-300 transform hover:scale-105 hover:-translate-y-1 shadow-lg hover:shadow-xl">
-                Book Your Appointment Now
-              </button>
-              <button className="bg-canvas-white px-6 sm:px-8 lg:px-10 py-3 sm:py-4 rounded-full font-bold text-canvas-brown text-base sm:text-lg transition-all duration-300 transform hover:scale-105 hover:-translate-y-1 shadow-lg hover:shadow-xl hover:bg-gray-50">
-                Call (555) 123-NAILS
+                  <a
+                  href='https://booksy.com/en-us/774723_the-nail-canvas_nail-salon_16218_savannah?do=invite&utm_medium=merchant_customer_invite'
+                  target='_blank'
+                  >
+                  Book Your Appointment 
+                  </a>
               </button>
             </div>
 

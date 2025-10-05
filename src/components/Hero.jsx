@@ -179,7 +179,12 @@ const Hero = () => {
                     animation: animationPhase >= 3 && isInView ? 'pulse 2s ease-in-out infinite' : 'none'
                   }}
                 >
-                  Book Your Appointment
+                  <a
+                  href='https://booksy.com/en-us/774723_the-nail-canvas_nail-salon_16218_savannah?do=invite&utm_medium=merchant_customer_invite'
+                  target='_blank'
+                  >
+                  Book Your Appointment 
+                  </a>
                 </button>
                 <button className="btn-secondary px-6 sm:px-8 py-3 sm:py-4 rounded-full font-semibold hover-lift transition-all duration-300 ease-out hover:scale-105 hover:shadow-lg active:scale-95 w-full sm:w-auto">
                   View Portfolio
