@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useCallback, useMemo } from 'react';
-import logo from '../assets/images/logo.png';
+import logo from '../assets/images/logo.png'
 
 // Constants
 const COLORS = {
@@ -89,11 +89,9 @@ const useScrollTracking = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      // Only track sections that are in the navigation (excluding 'home')
       const sections = NAV_TABS.map(tab => tab.sectionId);
-      const scrollPosition = window.scrollY + 150; // Increased offset for better detection
+      const scrollPosition = window.scrollY + 150;
 
-      // Start with no active section
       let newActiveSection = '';
 
       for (let i = sections.length - 1; i >= 0; i--) {
@@ -120,8 +118,8 @@ const useScrollTracking = () => {
 const Logo = () => (
   <div className="flex-shrink-0 flex items-center">
     <img 
-      src={logo} 
-      alt="Beauty Studio Logo" 
+      src={logo}
+      alt="The Nail Canvas Logo" 
       className="h-12 w-auto rounded-lg shadow-sm transition-transform duration-300 hover:scale-105"
       loading="lazy"
     />
@@ -137,14 +135,26 @@ const Logo = () => (
 const NavigationButton = ({ tab, isActive, onClick }) => (
   <button
     onClick={onClick}
-    className={`px-6 py-3 rounded-full text-sm font-medium transition-all duration-300 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-offset-2 ${
+    className={`px-6 py-3 rounded-full text-sm font-medium transition-all duration-300 ease-out hover:scale-105 hover:shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2 ${
       isActive
         ? 'text-white shadow-lg transform scale-105 focus:ring-white'
-        : 'hover:text-white focus:ring-gray-400'
+        : 'focus:ring-gray-400'
     }`}
     style={{
       backgroundColor: isActive ? COLORS.primary : 'transparent',
       color: isActive ? COLORS.background : COLORS.primary,
+    }}
+    onMouseEnter={(e) => {
+      if (!isActive) {
+        e.currentTarget.style.backgroundColor = COLORS.primary;
+        e.currentTarget.style.color = COLORS.background;
+      }
+    }}
+    onMouseLeave={(e) => {
+      if (!isActive) {
+        e.currentTarget.style.backgroundColor = 'transparent';
+        e.currentTarget.style.color = COLORS.primary;
+      }
     }}
   >
     {tab.name}
@@ -154,9 +164,17 @@ const NavigationButton = ({ tab, isActive, onClick }) => (
 const SocialButton = ({ platform, onClick, children, ariaLabel }) => (
   <button 
     onClick={onClick}
-    className="p-2 rounded-full transition-all duration-300 hover:scale-110 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-400"
+    className="p-2 rounded-full transition-all duration-300 ease-out hover:scale-110 hover:shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-400"
     style={{ color: COLORS.primary }}
     aria-label={ariaLabel}
+    onMouseEnter={(e) => {
+      e.currentTarget.style.backgroundColor = COLORS.accent;
+      e.currentTarget.style.transform = 'scale(1.15) rotate(5deg)';
+    }}
+    onMouseLeave={(e) => {
+      e.currentTarget.style.backgroundColor = 'transparent';
+      e.currentTarget.style.transform = 'scale(1) rotate(0deg)';
+    }}
   >
     {children}
   </button>
@@ -165,7 +183,7 @@ const SocialButton = ({ platform, onClick, children, ariaLabel }) => (
 const ContactButton = ({ onClick, className = "" }) => (
   <button 
     onClick={onClick} 
-    className={`flex items-center space-x-2 px-6 py-3 rounded-2xl font-medium shadow-md transition-all duration-300 hover:shadow-lg hover:scale-105 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-400 ${className}`}
+    className={`flex items-center space-x-2 px-6 py-3 rounded-2xl font-medium shadow-md transition-all duration-300 ease-out hover:shadow-xl hover:scale-105 hover:-translate-y-0.5 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-400 ${className}`}
     style={{ backgroundColor: COLORS.primary, color: COLORS.background }}
     aria-label="Contact us"
   >
@@ -174,19 +192,17 @@ const ContactButton = ({ onClick, className = "" }) => (
   </button>
 );
 
-const BookNowButton = ({onClick, className = ""}) =>(
-  <button
-    onClick={onClick}
-    className={`flex items-center bg-canvas-black text-canvas-white space-x-2 px-6 py-3 rounded-2xl font-medium shadow-md transition-all duration-300 hover:shadow-lg hover:scale-105 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-400 ${className}`}
-  >
-    <a
+const BookNowButton = ({ onClick, className = "" }) => (
+  <a
     href='https://booksy.com/en-us/774723_the-nail-canvas_nail-salon_16218_savannah?do=invite&utm_medium=merchant_customer_invite'
     target='_blank'
-    >
-    Book Now
-    </a>
-  </button>
-)
+    rel='noopener noreferrer'
+    className={`flex items-center space-x-2 px-6 py-3 rounded-2xl font-medium shadow-md transition-all duration-300 ease-out hover:shadow-xl hover:scale-105 hover:-translate-y-0.5 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-400 ${className}`}
+    style={{ backgroundColor: COLORS.primary, color: COLORS.background }}
+  >
+    <span>Book Now</span>
+  </a>
+);
 
 const MobileNavigationButton = ({ tab, isActive, onClick }) => (
   <button
@@ -313,7 +329,7 @@ const Navbar = () => {
                     <InstagramIcon />
                   </SocialButton>
                   <ContactButton onClick={handleContactClick} className="ml-2" />
-                  <BookNowButton></BookNowButton>
+                  <BookNowButton />
                 </div>
               </div>
             </div>
@@ -380,6 +396,7 @@ const Navbar = () => {
               </div>
               
               <ContactButton onClick={handleContactClick} className="mx-4" />
+              <BookNowButton className="mx-4" />
             </div>
           </div>
         </div>
