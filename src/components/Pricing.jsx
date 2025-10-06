@@ -39,6 +39,16 @@ const Pricing = () => {
         highlight: "Pure pampering for your hands"
       },
       {
+        name: "Russian Manicure",
+        description: "Indulge in a luxurious experience with warm soak, exfoliating scrub, hydrating mask, and extended massage for ultimate relaxation.",
+        price: 40,
+        duration: "60 min",
+        popular: false,
+        features: ["Warm Soak", "Exfoliating Scrub", "Hydrating Mask", "Extended Massage"],
+        highlight: "Pure pampering for your hands"
+      },
+
+      {
         name: "Spa Manicure w/ Gel",
         description: "The ultimate combination of spa luxury and long-lasting gel polish. Enjoy premium pampering with weeks of perfect color.",
         price: 55,
@@ -357,14 +367,11 @@ const Pricing = () => {
             <h1 className="maharlika-font text-5xl sm:text-6xl lg:text-7xl xl:text-8xl leading-none text-gradient">
               Pricing
             </h1>
-            <h2 className="breathing-font text-2xl sm:text-3xl lg:text-4xl font-semibold text-canvas-brown leading-tight px-4">
-              Luxury Services + Transparent Pricing
-            </h2>
           </div>
           
           <div className="flex flex-col sm:flex-row items-center justify-center sm:space-x-4 space-y-2 sm:space-y-0 mb-6 sm:mb-8 px-4">
             <div className="h-px w-12 sm:w-16 bg-gradient-to-r from-pink-300 to-red-900 hidden sm:block"></div>
-            <span className="breathing-font text-lg sm:text-xl lg:text-2xl text-canvas-black text-center">Premium Care for Every Budget</span>
+            <span className="breathing-font text-lg sm:text-xl lg:text-2xl text-canvas-black text-center"> Luxury Services + Transparent Pricing</span>
             <span className="text-xl sm:text-2xl">💎</span>
             <div className="h-px w-12 sm:w-16 bg-gradient-to-l from-pink-300 to-red-900 hidden sm:block"></div>
           </div>

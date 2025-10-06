@@ -2,7 +2,7 @@
 
   const Services = () => {
     return (
-      <section className='flex flex-col py-6 sm:py-8 lg:py-12 px-4 sm:px-6 lg:px-8 relative overflow-hidden'>
+      <section id='about' className='flex flex-col py-6 sm:py-8 lg:py-12 px-4 sm:px-6 lg:px-8 relative overflow-hidden'>
         {/* Enhanced background decorative elements */}
         <div className="absolute inset-0 opacity-10">
           <div className="absolute top-10 sm:top-20 left-5 sm:left-10 w-20 h-20 sm:w-32 sm:h-32 bg-pink-300 rounded-full blur-xl animate-pulse"></div>

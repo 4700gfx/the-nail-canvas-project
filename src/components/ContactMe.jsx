@@ -107,7 +107,7 @@ const ContactMe = () => {
 
   if (isSubmitted) {
     return (
-      <section className="min-h-screen relative overflow-hidden py-20 flex items-center justify-center">
+      <section id='contactMe' className="min-h-screen relative overflow-hidden py-20 flex items-center justify-center">
         <div className="absolute top-0 right-0 w-96 h-96 bg-gradient-to-bl from-pink-200/20 to-transparent rounded-full blur-3xl"></div>
         <div className="absolute bottom-0 left-0 w-80 h-80 bg-gradient-to-tr from-amber-100/20 to-transparent rounded-full blur-3xl"></div>
         

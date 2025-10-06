@@ -204,7 +204,7 @@ const Gallery = () => {
   };
 
   return (
-    <section className="min-h-screen relative overflow-hidden py-20 w-8/10 mx-auto rounded-4xl">
+    <section id='nailGallery' className="min-h-screen relative overflow-hidden py-20 w-8/10 mx-auto rounded-4xl">
       {/* Background Carousel */}
       <div className="absolute inset-0 z-0">
         <div 

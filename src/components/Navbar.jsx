@@ -18,7 +18,7 @@ const SOCIAL_MEDIA_LINKS = {
 
 const NAV_TABS = [
   { key: 'aboutUs', name: 'About Us', sectionId: 'about' },
-  { key: 'treatments', name: 'Treatments', sectionId: 'treatments' },
+  { key: 'benefits', name: 'Benefits', sectionId: 'benefits' },
   { key: 'testimony', name: 'Testimonies', sectionId: 'testimonies' },
   { key: 'nailGallery', name: 'Nail Gallery', sectionId: 'nailGallery' },
   { key: 'meetMe', name: 'Meet Me', sectionId: 'meetMe' },

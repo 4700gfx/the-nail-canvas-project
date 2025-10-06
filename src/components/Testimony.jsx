@@ -94,7 +94,7 @@ const Testimony = () => {
   };
 
   return (
-    <section className="min-h-screen relative overflow-hidden mt-20">
+    <section id='testimonies' className="min-h-screen relative overflow-hidden mt-20">
       <style jsx>{`
         @keyframes slideInFromLeft {
           from {

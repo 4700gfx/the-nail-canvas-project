@@ -42,7 +42,7 @@ const MeetMe = () => {
   ];
 
   return (
-    <section className="min-h-screen relative overflow-hidden py-20">
+    <section id='meetMe' className="min-h-screen relative overflow-hidden py-20">
       {/* Enhanced Background accents */}
       <div className="absolute top-0 right-0 w-96 h-96 bg-gradient-to-bl from-pink-200/10 to-transparent rounded-full blur-3xl"></div>
       <div className="absolute bottom-0 left-0 w-80 h-80 bg-gradient-to-tr from-amber-100/10 to-transparent rounded-full blur-3xl"></div>

@@ -197,9 +197,9 @@ const Hero = () => {
               animationPhase >= 3 && isInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
             }`}>
               {[
-                { value: '500+', label: 'Happy Clients' },
+                { value: '50+', label: 'Happy Clients' },
                 { value: '⭐ 5.0', label: 'Average Rating' },
-                { value: '3+', label: 'Years Experience' }
+                { value: '7+', label: 'Years Experience' }
               ].map((stat, index) => (
                 <div 
                   key={stat.label}

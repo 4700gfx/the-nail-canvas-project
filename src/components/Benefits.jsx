@@ -145,7 +145,7 @@ const Benefits = () => {
   }, []);
 
   return (
-    <section ref={sectionRef} className='flex flex-col py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden'>
+    <section ref={sectionRef} id='benefits' className='flex flex-col py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden'>
       {/* Enhanced Background decorative elements with in/out view animations */}
       <div className={`absolute inset-0 opacity-5 transition-all duration-2000 ease-out ${
         sectionInView && backgroundVisible ? 'scale-100 opacity-5' : 'scale-75 opacity-0'
@@ -253,7 +253,7 @@ const Benefits = () => {
             headerVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
           }`}>
             Discover the transformative advantages of our advanced Gel-Based Nail Design system, 
-            where beauty meets wellness in perfect harmony. Look into the benefits of The Nail Canvas benefits below:
+            where beauty meets wellness in perfect harmony. Look into the benefits of gel products below:
           </p>
         </div>
 
