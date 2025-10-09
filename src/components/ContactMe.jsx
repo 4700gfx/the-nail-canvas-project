@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import emailjs from '@emailjs/browser';
 
 const ContactMe = () => {
   const [formData, setFormData] = useState({
@@ -15,7 +16,13 @@ const ContactMe = () => {
   const [errors, setErrors] = useState({});
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [submitError, setSubmitError] = useState('');
   const [focusedField, setFocusedField] = useState('');
+
+  // TODO: Replace these with your actual EmailJS credentials
+  const EMAILJS_SERVICE_ID = 'YOUR_SERVICE_ID';
+  const EMAILJS_TEMPLATE_ID = 'YOUR_TEMPLATE_ID';
+  const EMAILJS_PUBLIC_KEY = 'YOUR_PUBLIC_KEY';
 
   const services = [
     'Classic Manicure',
@@ -50,12 +57,15 @@ const ContactMe = () => {
       [name]: value
     }));
     
-    // Clear error when user starts typing
     if (errors[name]) {
       setErrors(prev => ({
         ...prev,
         [name]: ''
       }));
+    }
+    
+    if (submitError) {
+      setSubmitError('');
     }
   };
 
@@ -76,15 +86,34 @@ const ContactMe = () => {
     return Object.keys(newErrors).length === 0;
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     
     if (!validateForm()) return;
     
     setIsSubmitting(true);
-    
-    // Simulate API call
-    setTimeout(() => {
+    setSubmitError('');
+
+    // Prepare template parameters for EmailJS
+    const templateParams = {
+      from_name: `${formData.firstName} ${formData.lastName}`,
+      reply_to: formData.email,
+      phone: formData.phone,
+      service: formData.service,
+      preferred_date: formData.preferredDate || 'Not specified',
+      preferred_time: formData.preferredTime || 'Not specified',
+      message: formData.message || 'No additional message'
+    };
+
+    try {
+      // Send email using EmailJS
+      await emailjs.send(
+        EMAILJS_SERVICE_ID,
+        EMAILJS_TEMPLATE_ID,
+        templateParams,
+        EMAILJS_PUBLIC_KEY
+      );
+      
       setIsSubmitting(false);
       setIsSubmitted(true);
       
@@ -102,7 +131,11 @@ const ContactMe = () => {
           message: ''
         });
       }, 3000);
-    }, 2000);
+    } catch (error) {
+      console.error('EmailJS Error:', error);
+      setIsSubmitting(false);
+      setSubmitError('Sorry, there was an error sending your request. Please try again or contact us directly at thenailcanvas912@gmail.com');
+    }
   };
 
   if (isSubmitted) {
@@ -162,6 +195,12 @@ const ContactMe = () => {
         <div className="bg-white rounded-3xl shadow-2xl p-8 lg:p-12 relative overflow-hidden">
           <div className="absolute top-0 right-0 w-32 h-32 bg-pink-100/30 rounded-full blur-2xl transform translate-x-16 -translate-y-16"></div>
           <div className="absolute bottom-0 left-0 w-24 h-24 bg-amber-50/30 rounded-full blur-xl transform -translate-x-12 translate-y-12"></div>
+          
+          {submitError && (
+            <div className="mb-6 p-4 bg-red-50 border-2 border-red-200 rounded-xl">
+              <p className="text-red-700 text-center">{submitError}</p>
+            </div>
+          )}
           
           <div className="relative z-10 space-y-8">
             <div className="space-y-6">
@@ -406,7 +445,7 @@ const ContactMe = () => {
 
             <div className="pt-8 border-t">
               <button
-                onClick={handleSubmit}
+                type="submit"
                 disabled={isSubmitting}
                 className={`w-full py-5 px-8 rounded-2xl font-bold text-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl ${
                   isSubmitting 
