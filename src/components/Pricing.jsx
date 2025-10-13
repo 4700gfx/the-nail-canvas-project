@@ -13,139 +13,147 @@ const Pricing = () => {
     manicures: [
       {
         name: "Manicure",
-        description: "Classic nail care with expert shaping, cuticle treatment, and your choice of regular polish. Perfect for maintaining healthy, beautiful nails.",
+        description: "Classic nail care with expert shaping, cuticle treatment, and your choice of regular polish. Perfect for maintaining healthy, beautiful nails with a timeless finish.",
         price: 30,
         duration: "45 min",
         popular: false,
-        features: ["Nail Shaping", "Cuticle Care", "Hand Massage", "Regular Polish"],
+        features: ["Precision Nail Shaping", "Cuticle Care & Treatment", "Relaxing Hand Massage", "Regular Polish Application"],
         highlight: "Timeless beauty and care"
       },
       {
         name: "Manicure w/ Gel",
-        description: "Elevate your manicure with long-lasting gel polish that provides superior shine and chip-resistance for up to 2-3 weeks.",
-        price: 45,
+        description: "Elevate your manicure with long-lasting gel polish that provides superior shine and chip-resistance for up to 2-3 weeks. Our most requested service for busy lifestyles.",
+        price: 40,
         duration: "60 min",
         popular: true,
-        features: ["Nail Shaping", "Cuticle Treatment", "Hand Massage", "Gel Polish"],
+        features: ["Expert Nail Shaping", "Cuticle Treatment", "Hand Massage", "Premium Gel Polish"],
         highlight: "Our most popular choice - lasts weeks!"
       },
       {
         name: "Spa Manicure",
-        description: "Indulge in a luxurious experience with warm soak, exfoliating scrub, hydrating mask, and extended massage for ultimate relaxation.",
-        price: 40,
+        description: "Indulge in a luxurious spa experience featuring warm soak, exfoliating sugar scrub, nourishing hydrating mask, and extended massage for the ultimate hand pampering.",
+        price: 45,
         duration: "60 min",
         popular: false,
-        features: ["Warm Soak", "Exfoliating Scrub", "Hydrating Mask", "Extended Massage"],
+        features: ["Warm Aromatherapy Soak", "Sugar Scrub Exfoliation", "Hydrating Mask Treatment", "Extended Hand Massage"],
         highlight: "Pure pampering for your hands"
       },
       {
         name: "Russian Manicure",
-        description: "Indulge in a luxurious experience with warm soak, exfoliating scrub, hydrating mask, and extended massage for ultimate relaxation.",
-        price: 40,
-        duration: "60 min",
+        description: "Experience the meticulous European technique featuring precise cuticle work and a flawless, clean finish. This detailed service creates the perfect canvas for long-lasting polish.",
+        price: 45,
+        duration: "75 min",
         popular: false,
-        features: ["Warm Soak", "Exfoliating Scrub", "Hydrating Mask", "Extended Massage"],
-        highlight: "Pure pampering for your hands"
+        features: ["Precision Cuticle Work", "E-file Technique", "Clean Nail Bed", "Perfected Finish"],
+        highlight: "European precision technique"
       },
-
+      {
+        name: "Russian Manicure w/ Gel",
+        description: "Combine the precision of Russian technique with the longevity of gel polish. Enjoy immaculate cuticle work and weeks of flawless, chip-free color.",
+        price: 50,
+        duration: "90 min",
+        popular: false,
+        features: ["Russian Technique", "E-file Precision", "Premium Gel Polish", "Extended Wear"],
+        highlight: "Precision meets perfection"
+      },
       {
         name: "Spa Manicure w/ Gel",
-        description: "The ultimate combination of spa luxury and long-lasting gel polish. Enjoy premium pampering with weeks of perfect color.",
+        description: "The ultimate combination of spa luxury and long-lasting gel polish. Enjoy premium pampering with exfoliating treatments, hydrating masks, and weeks of perfect color.",
         price: 55,
         duration: "75 min",
         popular: false,
-        features: ["Spa Treatment", "Premium Products", "Gel Polish", "Extended Care"],
+        features: ["Spa Treatment Package", "Premium Skincare Products", "Long-lasting Gel Polish", "Extended Massage"],
         highlight: "Luxury meets longevity"
       },
       {
         name: "MANicure",
-        description: "Designed specifically for men's nails and hands. Professional grooming with nail trimming, buffing, and cuticle care.",
-        price: 25,
+        description: "Professional nail grooming designed specifically for men. Features nail trimming, shaping, buffing, and cuticle care for a clean, polished, and well-maintained appearance.",
+        price: 35,
         duration: "40 min",
         popular: false,
-        features: ["Nail Trimming", "Buffing", "Cuticle Care", "Hand Treatment"],
+        features: ["Nail Trimming & Shaping", "Professional Buffing", "Cuticle Care", "Hand Treatment"],
         highlight: "Professional grooming for men"
       },
       {
         name: "MANicure w/ Gel",
-        description: "Men's professional nail care enhanced with clear or natural gel for a polished, well-groomed appearance that lasts.",
-        price: 40,
+        description: "Men's professional nail care enhanced with clear or natural gel for a polished, well-groomed appearance that lasts for weeks. Perfect for the modern gentleman.",
+        price: 45,
         duration: "55 min",
         popular: false,
-        features: ["Professional Grooming", "Gel Treatment", "Natural Finish", "Long-lasting"],
+        features: ["Professional Nail Grooming", "Clear Gel Treatment", "Natural Finish", "Long-lasting Protection"],
         highlight: "Refined and sophisticated"
       }
     ],
     pedicures: [
       {
         name: "Basic Pedicure",
-        description: "Essential foot care with warm soak, nail trimming, callus removal, and your choice of regular polish for beautiful, healthy feet.",
+        description: "Essential foot care featuring warm aromatherapy soak, precision nail trimming, callus removal, and your choice of regular polish. Perfect for maintaining healthy, beautiful feet.",
         price: 35,
         duration: "50 min",
         popular: false,
-        features: ["Warm Soak", "Nail Trimming", "Callus Removal", "Regular Polish"],
+        features: ["Warm Aromatherapy Soak", "Precision Nail Trimming", "Callus Removal", "Regular Polish Application"],
         highlight: "Essential foot care"
       },
       {
         name: "Basic Pedicure w/ Gel",
-        description: "Classic pedicure enhanced with chip-resistant gel polish that keeps your toes looking perfect for 3-4 weeks.",
+        description: "Classic pedicure elevated with chip-resistant gel polish that keeps your toes looking flawless for 3-4 weeks. Ideal for active lifestyles and special occasions.",
         price: 50,
         duration: "65 min",
         popular: true,
-        features: ["Complete Foot Care", "Gel Polish", "Extended Wear", "Mirror Finish"],
+        features: ["Complete Foot Care", "Premium Gel Polish", "Extended Wear Formula", "Mirror-Shine Finish"],
         highlight: "Perfect for active lifestyles"
       },
       {
-        name: "Deluxe Pedicure",
-        description: "Premium foot spa experience with sugar scrub exfoliation, hydrating mask, hot stone massage, and extended pampering.",
-        price: 50,
+        name: "Deluxe Pedicure w/ Gel",
+        description: "Luxurious spa pedicure featuring exfoliating scrub, hydrating mask treatment, extended massage, and long-lasting gel polish for the ultimate foot transformation.",
+        price: 45,
         duration: "75 min",
         popular: false,
-        features: ["Sugar Scrub", "Hydrating Mask", "Hot Stone Massage", "Premium Care"],
-        highlight: "Ultimate foot indulgence"
+        features: ["Exfoliating Sugar Scrub", "Hydrating Mask Treatment", "Extended Massage", "Premium Gel Polish"],
+        highlight: "Spa luxury with lasting beauty"
       },
       {
-        name: "Deluxe Pedicure w/ Gel",
-        description: "Our most luxurious pedicure combining spa-quality treatments with long-lasting gel polish for the ultimate foot transformation.",
-        price: 65,
+        name: "Deluxe Pedicure w/ Gel Premium",
+        description: "Our signature pedicure experience combining premium spa treatments, deep exfoliation, nourishing masks, and long-lasting gel polish for unparalleled indulgence.",
+        price: 60,
         duration: "90 min",
         popular: false,
-        features: ["Deluxe Spa Treatment", "Gel Polish", "Hot Stone Therapy", "Extended Massage"],
+        features: ["Deluxe Spa Treatment", "Deep Exfoliation", "Nourishing Mask", "Premium Gel Polish"],
         highlight: "Pure bliss for your feet"
       }
     ],
     extensions: [
       {
         name: "Short Full Set",
-        description: "Professional gel extensions in a natural short length. Perfect for those who want subtle elegance and strength.",
-        price: 60,
+        description: "Professional gel extensions in a natural short length. Perfect for those seeking subtle elegance, added strength, and a polished everyday look.",
+        price: 55,
         duration: "120 min",
         popular: false,
-        features: ["Custom Shape", "Natural Length", "Reinforced Strength", "Professional Finish"],
+        features: ["Custom Shape Design", "Natural Short Length", "Reinforced Strength", "Professional Finish"],
         highlight: "Ideal for everyday elegance"
       },
       {
         name: "Medium Full Set",
-        description: "Versatile medium-length extensions that strike the perfect balance between practicality and glamour for any occasion.",
-        price: 70,
+        description: "Versatile medium-length extensions offering the perfect balance between practicality and glamour. Our most popular length for any occasion.",
+        price: 65,
         duration: "135 min",
         popular: true,
-        features: ["Versatile Length", "Custom Design", "Durable Build", "Show-stopping Shine"],
+        features: ["Versatile Medium Length", "Custom Design", "Durable Construction", "Show-stopping Shine"],
         highlight: "The perfect length - most popular!"
       },
       {
         name: "Long Full Set",
-        description: "Dramatic long extensions for those who love to make a statement. Maximum length with superior strength and beauty.",
-        price: 80,
+        description: "Dramatic long extensions for those who love making a bold statement. Maximum length combined with superior strength and stunning beauty.",
+        price: 75,
         duration: "150 min",
         popular: false,
-        features: ["Statement Length", "Bold Impact", "Maximum Strength", "Glamorous Finish"],
+        features: ["Statement Long Length", "Bold Impact", "Maximum Strength", "Glamorous Finish"],
         highlight: "For the bold and beautiful"
       },
       {
         name: "Extra Long Full Set",
-        description: "Our most dramatic extension service. Ultra-long nails crafted with precision for those who demand show-stopping impact.",
-        price: 95,
+        description: "Our most dramatic extension service featuring ultra-long nails crafted with precision. For those who demand show-stopping, unforgettable impact.",
+        price: 85,
         duration: "165 min",
         popular: false,
         features: ["Ultra-Long Length", "Maximum Drama", "Expert Construction", "Unforgettable Style"],
@@ -153,26 +161,26 @@ const Pricing = () => {
       },
       {
         name: "Short Fill",
-        description: "Maintain your short gel extensions with professional fill-in service. Refresh growth area and perfect the shape.",
-        price: 40,
+        description: "Maintain your short gel extensions with professional fill-in service. Refresh the growth area, perfect the shape, and restore that fresh-set appearance.",
+        price: 50,
         duration: "75 min",
         popular: false,
-        features: ["Growth Area Fill", "Shape Maintenance", "Polish Refresh", "Strength Check"],
+        features: ["Growth Area Fill", "Shape Maintenance", "Polish Refresh", "Strength Inspection"],
         highlight: "Keep them looking fresh"
       },
       {
         name: "Medium Fill",
-        description: "Professional maintenance for your medium extensions. We'll fill, reshape, and refresh for continued perfection.",
-        price: 50,
+        description: "Professional maintenance for your medium extensions. Complete fill-in, reshaping, and refresh to maintain continued perfection and longevity.",
+        price: 55,
         duration: "90 min",
         popular: false,
-        features: ["Complete Fill-in", "Reshaping", "Structure Check", "Color Refresh"],
+        features: ["Complete Fill-in", "Reshaping Service", "Structure Check", "Color Refresh"],
         highlight: "Maintain your perfect look"
       },
       {
         name: "Long Fill",
-        description: "Expert fill-in service for long extensions. Restore strength, perfect the shape, and maintain your dramatic length.",
-        price: 60,
+        description: "Expert fill-in service for long extensions. Restore strength, perfect the shape, and maintain your dramatic length with professional precision.",
+        price: 65,
         duration: "105 min",
         popular: false,
         features: ["Growth Fill", "Length Maintenance", "Reinforcement", "Polish Update"],
@@ -180,8 +188,8 @@ const Pricing = () => {
       },
       {
         name: "Extra Long Fill",
-        description: "Specialized maintenance for ultra-long extensions. Comprehensive care to keep your statement nails flawless.",
-        price: 70,
+        description: "Specialized maintenance for ultra-long extensions. Comprehensive care and expert attention to keep your statement nails flawless and strong.",
+        price: 75,
         duration: "120 min",
         popular: false,
         features: ["Complete Maintenance", "Ultra-Long Care", "Structure Reinforcement", "Perfect Finish"],
@@ -189,16 +197,16 @@ const Pricing = () => {
       },
       {
         name: "Short Rebalance",
-        description: "Complete rebalancing service for short extensions. Restore structure, correct shape, and ensure optimal nail health.",
-        price: 50,
+        description: "Complete rebalancing service for short extensions. Restore structure, correct shape irregularities, and ensure optimal nail health and appearance.",
+        price: 55,
         duration: "90 min",
         popular: false,
-        features: ["Structure Correction", "Shape Restoration", "Product Reapplication", "Health Check"],
+        features: ["Structure Correction", "Shape Restoration", "Product Reapplication", "Health Assessment"],
         highlight: "Restore and perfect"
       },
       {
         name: "Medium Rebalance",
-        description: "Full rebalancing treatment for medium extensions. Comprehensive restoration of shape, strength, and beauty.",
+        description: "Full rebalancing treatment for medium extensions. Comprehensive restoration of shape, strength, and beauty for like-new results.",
         price: 60,
         duration: "105 min",
         popular: false,
@@ -207,7 +215,7 @@ const Pricing = () => {
       },
       {
         name: "Long Rebalance",
-        description: "Expert rebalancing for long extensions. Extensive care to restore integrity and beauty to your dramatic length.",
+        description: "Expert rebalancing for long extensions featuring extensive care to restore integrity, correct growth patterns, and revive beauty.",
         price: 70,
         duration: "120 min",
         popular: false,
@@ -216,8 +224,8 @@ const Pricing = () => {
       },
       {
         name: "Extra Long Rebalance",
-        description: "Premium rebalancing service for ultra-long extensions. Meticulous restoration to maintain show-stopping perfection.",
-        price: 85,
+        description: "Premium rebalancing service for ultra-long extensions. Meticulous restoration and expert craftsmanship to maintain show-stopping perfection.",
+        price: 80,
         duration: "135 min",
         popular: false,
         features: ["Ultra-Long Rebalance", "Complete Reconstruction", "Maximum Care", "Flawless Finish"],
@@ -498,6 +506,7 @@ const Pricing = () => {
                   <a
                   href='https://booksy.com/en-us/774723_the-nail-canvas_nail-salon_16218_savannah?do=invite&utm_medium=merchant_customer_invite'
                   target='_blank'
+                  rel='noopener noreferrer'
                   >
                     Book {service.name}
                   </a>
@@ -538,6 +547,7 @@ const Pricing = () => {
                   <a
                   href='https://booksy.com/en-us/774723_the-nail-canvas_nail-salon_16218_savannah?do=invite&utm_medium=merchant_customer_invite'
                   target='_blank'
+                  rel='noopener noreferrer'
                   >
                   Book Your Appointment 
                   </a>
