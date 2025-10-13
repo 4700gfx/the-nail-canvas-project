@@ -20,9 +20,9 @@ const ContactMe = () => {
   const [focusedField, setFocusedField] = useState('');
 
   // TODO: Replace these with your actual EmailJS credentials
-  const EMAILJS_SERVICE_ID = 'YOUR_SERVICE_ID';
-  const EMAILJS_TEMPLATE_ID = 'YOUR_TEMPLATE_ID';
-  const EMAILJS_PUBLIC_KEY = 'YOUR_PUBLIC_KEY';
+  const EMAILJS_SERVICE_ID = 'service_qrfdseh';
+  const EMAILJS_TEMPLATE_ID = 'template_x99qdhf';
+  const EMAILJS_PUBLIC_KEY = 'IyIGVAlhInONT4uQ5';
 
   const services = [
     'Classic Manicure',
@@ -117,7 +117,7 @@ const ContactMe = () => {
       setIsSubmitting(false);
       setIsSubmitted(true);
       
-      // Reset form after 3 seconds
+      // Reset form after 5 seconds
       setTimeout(() => {
         setIsSubmitted(false);
         setFormData({
@@ -130,32 +130,108 @@ const ContactMe = () => {
           preferredTime: '',
           message: ''
         });
-      }, 3000);
+      }, 5000);
     } catch (error) {
       console.error('EmailJS Error:', error);
       setIsSubmitting(false);
-      setSubmitError('Sorry, there was an error sending your request. Please try again or contact us directly at thenailcanvas912@gmail.com');
+      setSubmitError('Failed to send your request. Please try again or contact us directly.');
     }
   };
 
+  const handleRetry = () => {
+    setSubmitError('');
+  };
+
+  const handleNewBooking = () => {
+    setIsSubmitted(false);
+    setFormData({
+      firstName: '',
+      lastName: '',
+      email: '',
+      phone: '',
+      service: '',
+      preferredDate: '',
+      preferredTime: '',
+      message: ''
+    });
+  };
+
+  // Success State
   if (isSubmitted) {
     return (
       <section id='contactMe' className="min-h-screen relative overflow-hidden py-20 flex items-center justify-center">
-        <div className="absolute top-0 right-0 w-96 h-96 bg-gradient-to-bl from-pink-200/20 to-transparent rounded-full blur-3xl"></div>
-        <div className="absolute bottom-0 left-0 w-80 h-80 bg-gradient-to-tr from-amber-100/20 to-transparent rounded-full blur-3xl"></div>
+        <div className="absolute top-0 right-0 w-96 h-96 bg-gradient-to-bl from-pink-200/20 to-transparent rounded-full blur-3xl animate-pulse"></div>
+        <div className="absolute bottom-0 left-0 w-80 h-80 bg-gradient-to-tr from-amber-100/20 to-transparent rounded-full blur-3xl animate-pulse"></div>
         
-        <div className="bg-white rounded-3xl p-12 shadow-2xl text-center max-w-2xl mx-auto">
-          <div className="text-6xl mb-6">✨</div>
-          <h2 className="text-4xl font-bold text-amber-900 mb-4" style={{fontFamily: 'serif'}}>
-            Thank You!
-          </h2>
-          <p className="text-lg text-gray-700 mb-6">
-            Your inquiry has been received! We'll contact you within 24 hours to confirm your appointment and discuss your perfect nail experience.
-          </p>
-          <div className="flex items-center justify-center space-x-4 text-pink-600">
-            <span>💅</span>
-            <span className="font-medium">We can't wait to pamper you!</span>
-            <span>💎</span>
+        <div className="bg-white rounded-3xl p-12 shadow-2xl text-center max-w-2xl mx-auto relative overflow-hidden">
+          {/* Success Animation Background */}
+          <div className="absolute inset-0 bg-gradient-to-br from-pink-50 to-amber-50 opacity-50"></div>
+          
+          {/* Checkmark Animation */}
+          <div className="relative z-10">
+            <div className="mx-auto w-24 h-24 bg-gradient-to-br from-green-400 to-emerald-500 rounded-full flex items-center justify-center mb-6 shadow-lg animate-bounce">
+              <svg className="w-12 h-12 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
+              </svg>
+            </div>
+            
+            <h2 className="text-5xl font-bold text-amber-900 mb-4" style={{fontFamily: 'serif'}}>
+              Request Sent Successfully!
+            </h2>
+            
+            <div className="space-y-4 mb-8">
+              <p className="text-xl text-gray-800 font-semibold">
+                Thank you, {formData.firstName}! 💅
+              </p>
+              <p className="text-lg text-gray-700 leading-relaxed">
+                Your appointment inquiry has been received and we're excited to pamper you!
+              </p>
+              
+              <div className="bg-gradient-to-r from-pink-50 to-amber-50 rounded-2xl p-6 my-6">
+                <div className="space-y-3 text-left">
+                  <div className="flex items-start space-x-3">
+                    <span className="text-2xl">📧</span>
+                    <div>
+                      <p className="font-semibold text-gray-800">Check Your Email</p>
+                      <p className="text-sm text-gray-600">Confirmation sent to {formData.email}</p>
+                    </div>
+                  </div>
+                  <div className="flex items-start space-x-3">
+                    <span className="text-2xl">⏰</span>
+                    <div>
+                      <p className="font-semibold text-gray-800">We'll Contact You Soon</p>
+                      <p className="text-sm text-gray-600">Expect a response within 24 hours</p>
+                    </div>
+                  </div>
+                  <div className="flex items-start space-x-3">
+                    <span className="text-2xl">💎</span>
+                    <div>
+                      <p className="font-semibold text-gray-800">Service Requested</p>
+                      <p className="text-sm text-gray-600">{formData.service}</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+              <button
+                onClick={handleNewBooking}
+                className="px-8 py-3 bg-gradient-to-r from-pink-500 to-amber-600 text-white font-semibold rounded-xl hover:from-pink-600 hover:to-amber-700 transition-all duration-300 transform hover:scale-105 shadow-lg"
+              >
+                Book Another Service
+              </button>
+              <a
+                href="tel:+19123983353"
+                className="px-8 py-3 border-2 border-amber-600 text-amber-600 font-semibold rounded-xl hover:bg-amber-50 transition-all duration-300"
+              >
+                Call Us Now
+              </a>
+            </div>
+            
+            <p className="text-sm text-gray-500 mt-6">
+              This message will automatically close in a few seconds
+            </p>
           </div>
         </div>
       </section>
@@ -196,13 +272,47 @@ const ContactMe = () => {
           <div className="absolute top-0 right-0 w-32 h-32 bg-pink-100/30 rounded-full blur-2xl transform translate-x-16 -translate-y-16"></div>
           <div className="absolute bottom-0 left-0 w-24 h-24 bg-amber-50/30 rounded-full blur-xl transform -translate-x-12 translate-y-12"></div>
           
+          {/* Enhanced Error Message */}
           {submitError && (
-            <div className="mb-6 p-4 bg-red-50 border-2 border-red-200 rounded-xl">
-              <p className="text-red-700 text-center">{submitError}</p>
+            <div className="mb-6 bg-red-50 border-2 border-red-200 rounded-2xl p-6 relative overflow-hidden">
+              <div className="absolute top-0 left-0 w-2 h-full bg-red-500"></div>
+              <div className="flex items-start space-x-4">
+                <div className="flex-shrink-0">
+                  <div className="w-12 h-12 bg-red-500 rounded-full flex items-center justify-center">
+                    <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                  </div>
+                </div>
+                <div className="flex-1">
+                  <h4 className="text-lg font-bold text-red-800 mb-2">Oops! Something went wrong</h4>
+                  <p className="text-red-700 mb-4">{submitError}</p>
+                  <div className="flex flex-col sm:flex-row gap-3">
+                    <button
+                      onClick={handleRetry}
+                      className="px-6 py-2 bg-red-500 text-white font-semibold rounded-lg hover:bg-red-600 transition-all duration-300"
+                    >
+                      Try Again
+                    </button>
+                    <a
+                      href="mailto:thenailcanvas912@gmail.com"
+                      className="px-6 py-2 border-2 border-red-500 text-red-500 font-semibold rounded-lg hover:bg-red-50 transition-all duration-300 text-center"
+                    >
+                      Email Us Directly
+                    </a>
+                    <a
+                      href="tel:+19123983353"
+                      className="px-6 py-2 border-2 border-red-500 text-red-500 font-semibold rounded-lg hover:bg-red-50 transition-all duration-300 text-center"
+                    >
+                      Call Us: (912) 398-3353
+                    </a>
+                  </div>
+                </div>
+              </div>
             </div>
           )}
           
-          <div className="relative z-10 space-y-8">
+          <form onSubmit={handleSubmit} className="relative z-10 space-y-8">
             <div className="space-y-6">
               <h3 className="text-2xl font-bold text-amber-900 flex items-center">
                 <span className="mr-3">👤</span>
@@ -470,14 +580,14 @@ const ContactMe = () => {
                 * Required fields. We'll respond within 24 hours to confirm your appointment.
               </p>
             </div>
-          </div>
+          </form>
         </div>
 
         <div className="mt-16 grid md:grid-cols-3 gap-8">
           <div className="bg-white rounded-2xl p-8 shadow-lg text-center">
             <div className="text-4xl mb-4">📞</div>
             <h4 className="font-bold text-amber-900 mb-2">Call Us</h4>
-            <p className="text-gray-700">(912)-398-3353 </p>
+            <p className="text-gray-700">(912) 398-3353</p>
             <p className="text-sm text-gray-500 mt-2">Mon + Tues & Thurs - Sat: 9AM-6PM</p>
           </div>
           
@@ -491,7 +601,7 @@ const ContactMe = () => {
           <div className="bg-white rounded-2xl p-8 shadow-lg text-center">
             <div className="text-4xl mb-4">📍</div>
             <h4 className="font-bold text-amber-900 mb-2">Visit Us</h4>
-            <p className="text-gray-700">2515 MLK Blvd <br/>Savannah, GA 31415</p>
+            <p className="text-gray-700">2515 MLK Blvd<br />Savannah, GA 31415</p>
             <p className="text-sm text-gray-500 mt-2">Free parking available</p>
           </div>
         </div>
