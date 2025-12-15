@@ -122,12 +122,13 @@ const Gallery = () => {
   // Triple the images for seamless infinite scroll
   const infiniteImages = [...filteredImages, ...filteredImages, ...filteredImages];
 
-  // Auto-scroll functionality
+  // Auto-scroll functionality with improved speed
   useEffect(() => {
     if (isAutoScrolling && carouselRef.current) {
       scrollIntervalRef.current = setInterval(() => {
         const carousel = carouselRef.current;
-        const scrollAmount = 1.5;
+        // Faster scroll speed - 2.5 for smooth but noticeable movement
+        const scrollAmount = 2.5;
         
         carousel.scrollLeft += scrollAmount;
         
@@ -135,7 +136,7 @@ const Gallery = () => {
         if (carousel.scrollLeft >= carousel.scrollWidth - carousel.clientWidth) {
           carousel.scrollLeft = carousel.scrollWidth / 3;
         }
-      }, 30);
+      }, 20); // Reduced interval for smoother animation
     }
 
     return () => {
@@ -190,12 +191,19 @@ const Gallery = () => {
     setTimeout(() => setIsAutoScrolling(true), 4000);
   };
 
+  // Pause auto-scroll on hover (desktop only)
   const handleMouseEnter = () => {
-    setIsAutoScrolling(false);
+    // Only pause on desktop
+    if (window.innerWidth >= 768) {
+      setIsAutoScrolling(false);
+    }
   };
 
   const handleMouseLeave = () => {
-    setIsAutoScrolling(true);
+    // Only resume on desktop
+    if (window.innerWidth >= 768) {
+      setIsAutoScrolling(true);
+    }
   };
 
   return (
@@ -337,10 +345,14 @@ const Gallery = () => {
           {/* Enhanced Carousel Track */}
           <div 
             ref={carouselRef}
-            className="flex overflow-x-scroll md:overflow-x-hidden scroll-smooth gap-4 md:gap-6 lg:gap-8 py-4 md:py-6 px-4 md:px-2 snap-x snap-mandatory md:snap-none"
+            className="flex overflow-x-scroll md:overflow-x-hidden scroll-smooth gap-4 md:gap-6 lg:gap-8 py-4 md:py-6 px-4 md:px-2"
             onMouseEnter={handleMouseEnter}
             onMouseLeave={handleMouseLeave}
-            style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
+            style={{ 
+              scrollbarWidth: 'none', 
+              msOverflowStyle: 'none',
+              WebkitOverflowScrolling: 'touch'
+            }}
           >
             {infiniteImages.map((item, index) => (
               <div
