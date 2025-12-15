@@ -122,9 +122,12 @@ const Gallery = () => {
   // Triple the images for seamless infinite scroll
   const infiniteImages = [...filteredImages, ...filteredImages, ...filteredImages];
 
-  // Auto-scroll functionality with improved speed
+  // Auto-scroll functionality with improved speed (desktop only)
   useEffect(() => {
-    if (isAutoScrolling && carouselRef.current) {
+    // Only enable auto-scroll on desktop
+    const isDesktop = window.innerWidth >= 768;
+    
+    if (isAutoScrolling && carouselRef.current && isDesktop) {
       scrollIntervalRef.current = setInterval(() => {
         const carousel = carouselRef.current;
         // Faster scroll speed - 2.5 for smooth but noticeable movement
@@ -172,23 +175,35 @@ const Gallery = () => {
   const scrollLeft = () => {
     setIsAutoScrolling(false);
     if (carouselRef.current) {
+      const isMobile = window.innerWidth < 768;
+      const scrollDistance = isMobile ? carouselRef.current.offsetWidth * 0.85 : 400;
+      
       carouselRef.current.scrollBy({
-        left: -400,
+        left: -scrollDistance,
         behavior: 'smooth'
       });
     }
-    setTimeout(() => setIsAutoScrolling(true), 4000);
+    // Only resume auto-scroll on desktop
+    if (window.innerWidth >= 768) {
+      setTimeout(() => setIsAutoScrolling(true), 4000);
+    }
   };
 
   const scrollRight = () => {
     setIsAutoScrolling(false);
     if (carouselRef.current) {
+      const isMobile = window.innerWidth < 768;
+      const scrollDistance = isMobile ? carouselRef.current.offsetWidth * 0.85 : 400;
+      
       carouselRef.current.scrollBy({
-        left: 400,
+        left: scrollDistance,
         behavior: 'smooth'
       });
     }
-    setTimeout(() => setIsAutoScrolling(true), 4000);
+    // Only resume auto-scroll on desktop
+    if (window.innerWidth >= 768) {
+      setTimeout(() => setIsAutoScrolling(true), 4000);
+    }
   };
 
   // Pause auto-scroll on hover (desktop only)
@@ -297,29 +312,29 @@ const Gallery = () => {
 
         {/* Enhanced Carousel Container */}
         <div className="relative">
-          {/* Refined Navigation Buttons */}
+          {/* Refined Navigation Buttons - Now visible on all devices */}
           <button
             onClick={scrollLeft}
-            className="hidden md:flex absolute left-2 lg:left-4 top-1/2 transform -translate-y-1/2 z-30 w-12 h-12 lg:w-16 lg:h-16 bg-white/90 backdrop-blur-md rounded-full items-center justify-center shadow-2xl hover:shadow-canvas-pink/30 transition-all duration-500 hover:scale-110 hover:bg-canvas-pink hover:text-white group border border-white/50"
+            className="absolute left-2 md:left-4 top-1/2 transform -translate-y-1/2 z-30 w-12 h-12 md:w-14 md:h-14 lg:w-16 lg:h-16 bg-white/95 backdrop-blur-md rounded-full flex items-center justify-center shadow-2xl hover:shadow-canvas-pink/30 active:shadow-canvas-pink/50 transition-all duration-300 hover:scale-110 active:scale-95 hover:bg-canvas-pink hover:text-white active:bg-canvas-pink active:text-white group border border-white/50"
             aria-label="Scroll left"
           >
-            <svg className="w-5 h-5 lg:w-6 lg:h-6 transition-transform duration-300 group-hover:-translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <svg className="w-5 h-5 md:w-6 md:h-6 lg:w-7 lg:h-7 transition-transform duration-300 group-hover:-translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M15 19l-7-7 7-7" />
             </svg>
           </button>
           
           <button
             onClick={scrollRight}
-            className="hidden md:flex absolute right-2 lg:right-4 top-1/2 transform -translate-y-1/2 z-30 w-12 h-12 lg:w-16 lg:h-16 bg-white/90 backdrop-blur-md rounded-full items-center justify-center shadow-2xl hover:shadow-canvas-pink/30 transition-all duration-500 hover:scale-110 hover:bg-canvas-pink hover:text-white group border border-white/50"
+            className="absolute right-2 md:right-4 top-1/2 transform -translate-y-1/2 z-30 w-12 h-12 md:w-14 md:h-14 lg:w-16 lg:h-16 bg-white/95 backdrop-blur-md rounded-full flex items-center justify-center shadow-2xl hover:shadow-canvas-pink/30 active:shadow-canvas-pink/50 transition-all duration-300 hover:scale-110 active:scale-95 hover:bg-canvas-pink hover:text-white active:bg-canvas-pink active:text-white group border border-white/50"
             aria-label="Scroll right"
           >
-            <svg className="w-5 h-5 lg:w-6 lg:h-6 transition-transform duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <svg className="w-5 h-5 md:w-6 md:h-6 lg:w-7 lg:h-7 transition-transform duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 5l7 7-7 7" />
             </svg>
           </button>
 
-          {/* Auto-scroll indicator with animation */}
-          <div className="absolute top-0 right-2 md:right-4 z-30">
+          {/* Auto-scroll indicator with animation - Desktop only */}
+          <div className="hidden md:block absolute top-0 right-2 md:right-4 z-30">
             <div className={`px-3 md:px-5 py-2 md:py-2.5 rounded-full text-xs md:text-sm font-medium transition-all duration-500 backdrop-blur-md border ${
               isAutoScrolling 
                 ? 'bg-canvas-pink/20 text-canvas-brown border-canvas-pink/40 shadow-lg' 
@@ -345,7 +360,7 @@ const Gallery = () => {
           {/* Enhanced Carousel Track */}
           <div 
             ref={carouselRef}
-            className="flex overflow-x-scroll md:overflow-x-hidden scroll-smooth gap-4 md:gap-6 lg:gap-8 py-4 md:py-6 px-4 md:px-2"
+            className="flex overflow-x-scroll md:overflow-x-hidden scroll-smooth gap-4 md:gap-6 lg:gap-8 py-4 md:py-6 px-4 md:px-2 snap-x snap-mandatory md:snap-none"
             onMouseEnter={handleMouseEnter}
             onMouseLeave={handleMouseLeave}
             style={{ 
@@ -357,7 +372,7 @@ const Gallery = () => {
             {infiniteImages.map((item, index) => (
               <div
                 key={`${item.id}-${index}`}
-                className="flex-shrink-0 w-[85vw] sm:w-[70vw] md:w-[340px] h-[480px] sm:h-[520px] md:h-[440px] relative group cursor-pointer snap-center"
+                className="flex-shrink-0 w-[85vw] sm:w-[70vw] md:w-[340px] h-[480px] sm:h-[520px] md:h-[440px] relative group cursor-pointer snap-center md:snap-align-none"
                 onMouseEnter={() => setHoveredImage(`${item.id}-${index}`)}
                 onMouseLeave={() => setHoveredImage(null)}
               >
