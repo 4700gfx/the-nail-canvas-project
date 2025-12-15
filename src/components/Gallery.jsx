@@ -176,7 +176,10 @@ const Gallery = () => {
     setIsAutoScrolling(false);
     if (carouselRef.current) {
       const isMobile = window.innerWidth < 768;
-      const scrollDistance = isMobile ? carouselRef.current.offsetWidth * 0.85 : 400;
+      // Calculate the exact distance to scroll one full card + gap
+      const cardWidth = isMobile ? carouselRef.current.offsetWidth * 0.85 : 340;
+      const gap = isMobile ? 16 : (window.innerWidth >= 1024 ? 32 : 24);
+      const scrollDistance = cardWidth + gap;
       
       carouselRef.current.scrollBy({
         left: -scrollDistance,
@@ -193,7 +196,10 @@ const Gallery = () => {
     setIsAutoScrolling(false);
     if (carouselRef.current) {
       const isMobile = window.innerWidth < 768;
-      const scrollDistance = isMobile ? carouselRef.current.offsetWidth * 0.85 : 400;
+      // Calculate the exact distance to scroll one full card + gap
+      const cardWidth = isMobile ? carouselRef.current.offsetWidth * 0.85 : 340;
+      const gap = isMobile ? 16 : (window.innerWidth >= 1024 ? 32 : 24);
+      const scrollDistance = cardWidth + gap;
       
       carouselRef.current.scrollBy({
         left: scrollDistance,
