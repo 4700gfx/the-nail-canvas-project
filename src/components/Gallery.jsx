@@ -14,7 +14,6 @@ import benefit1 from '../assets/images/benefits-pics-1.jpeg'
 import benefit2 from '../assets/images/benefits-pics-2.jpeg'
 import benefit3 from '../assets/images/benefits-pics-3.jpeg'
 
-
 const Gallery = () => {
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [hoveredImage, setHoveredImage] = useState(null);
@@ -120,7 +119,7 @@ const Gallery = () => {
     ? galleryData 
     : galleryData.filter(item => item.category === selectedCategory);
 
-  // Double the images for seamless infinite scroll
+  // Triple the images for seamless infinite scroll
   const infiniteImages = [...filteredImages, ...filteredImages, ...filteredImages];
 
   // Auto-scroll functionality
@@ -128,15 +127,15 @@ const Gallery = () => {
     if (isAutoScrolling && carouselRef.current) {
       scrollIntervalRef.current = setInterval(() => {
         const carousel = carouselRef.current;
-        const scrollAmount = 2; // Smooth scrolling speed
+        const scrollAmount = 1.5;
         
         carousel.scrollLeft += scrollAmount;
         
         // Reset scroll when reaching the end for infinite effect
         if (carousel.scrollLeft >= carousel.scrollWidth - carousel.clientWidth) {
-          carousel.scrollLeft = carousel.scrollWidth / 3; // Reset to middle third
+          carousel.scrollLeft = carousel.scrollWidth / 3;
         }
-      }, 30); // Smooth 30ms intervals
+      }, 30);
     }
 
     return () => {
@@ -151,15 +150,14 @@ const Gallery = () => {
     if (backgroundCarouselRef.current) {
       backgroundScrollRef.current = setInterval(() => {
         const bgCarousel = backgroundCarouselRef.current;
-        const scrollAmount = 1; // Slower speed for background
+        const scrollAmount = 0.8;
         
         bgCarousel.scrollLeft += scrollAmount;
         
-        // Reset scroll for infinite effect
         if (bgCarousel.scrollLeft >= bgCarousel.scrollWidth - bgCarousel.clientWidth) {
           bgCarousel.scrollLeft = 0;
         }
-      }, 50); // Slower intervals for background
+      }, 50);
     }
 
     return () => {
@@ -169,7 +167,7 @@ const Gallery = () => {
     };
   }, []);
 
-  // Manual navigation functions
+  // Manual navigation with smoother experience
   const scrollLeft = () => {
     setIsAutoScrolling(false);
     if (carouselRef.current) {
@@ -178,8 +176,7 @@ const Gallery = () => {
         behavior: 'smooth'
       });
     }
-    // Resume auto-scroll after 3 seconds
-    setTimeout(() => setIsAutoScrolling(true), 3000);
+    setTimeout(() => setIsAutoScrolling(true), 4000);
   };
 
   const scrollRight = () => {
@@ -190,11 +187,9 @@ const Gallery = () => {
         behavior: 'smooth'
       });
     }
-    // Resume auto-scroll after 3 seconds
-    setTimeout(() => setIsAutoScrolling(true), 3000);
+    setTimeout(() => setIsAutoScrolling(true), 4000);
   };
 
-  // Pause auto-scroll on hover
   const handleMouseEnter = () => {
     setIsAutoScrolling(false);
   };
@@ -204,15 +199,14 @@ const Gallery = () => {
   };
 
   return (
-    <section id='nailGallery' className="min-h-screen relative overflow-hidden py-20 w-8/10 mx-auto rounded-4xl">
-      {/* Background Carousel */}
+    <section id='nailGallery' className="min-h-screen relative overflow-hidden py-24 w-full">
+      {/* Enhanced Background Carousel */}
       <div className="absolute inset-0 z-0">
         <div 
           ref={backgroundCarouselRef}
           className="flex h-full overflow-hidden"
           style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
         >
-          {/* Triple the benefit images for seamless loop */}
           {[...benefitImages, ...benefitImages, ...benefitImages, ...benefitImages, ...benefitImages].map((image, index) => (
             <div
               key={`bg-${index}`}
@@ -220,50 +214,53 @@ const Gallery = () => {
             >
               <img
                 src={image}
-                alt={`Background benefit ${index}`}
+                alt=""
                 className="w-full h-full object-cover"
                 onError={(e) => {
                   e.target.style.display = 'none';
                   e.target.parentElement.style.background = 'linear-gradient(135deg, #FF3CD7, #5C2314)';
                 }}
               />
-              {/* Dark overlay for readability */}
-              <div className="absolute inset-0 bg-black/60"></div>
+              <div className="absolute inset-0 bg-black/70 backdrop-blur-sm"></div>
             </div>
           ))}
         </div>
         
-        {/* Additional gradient overlay for content readability */}
-        <div className="absolute inset-0 bg-gradient-to-b from-white/80 via-white/60 to-white/80"></div>
+        {/* Modern gradient overlay */}
+        <div className="absolute inset-0 bg-gradient-to-b from-white/90 via-white/85 to-white/90"></div>
       </div>
 
-      {/* Subtle foreground accents */}
-      <div className="absolute top-0 right-0 w-96 h-96 bg-gradient-to-bl from-canvas-pink/10 to-transparent rounded-full blur-3xl z-10"></div>
-      <div className="absolute bottom-0 left-0 w-80 h-80 bg-gradient-to-tr from-canvas-brown/10 to-transparent rounded-full blur-3xl z-10"></div>
+      {/* Ambient lighting effects */}
+      <div className="absolute top-1/4 right-0 w-[500px] h-[500px] bg-canvas-pink/8 rounded-full blur-[120px] z-10 animate-pulse"></div>
+      <div className="absolute bottom-1/4 left-0 w-[400px] h-[400px] bg-canvas-brown/8 rounded-full blur-[100px] z-10 animate-pulse" style={{ animationDelay: '1s' }}></div>
 
-      <div className="w-[95%] mx-auto px-6 lg:px-4 relative z-20">
-        {/* Header Section */}
-        <div className="text-center mb-16 space-y-6">
-          <h1 className="maharlika-font text-6xl lg:text-7xl text-canvas-brown">
-            Our Gallery
-          </h1>
-          <div className="flex items-center justify-center space-x-4">
-            <div className="h-px w-12 bg-gradient-to-r from-canvas-pink to-canvas-brown"></div>
-            <h3 className="breathing-font text-2xl text-canvas-black">
-              Artistry in Every Detail
-            </h3>
-            <div className="h-px w-12 bg-gradient-to-l from-canvas-pink to-canvas-brown"></div>
+      <div className="w-[95%] max-w-[1600px] mx-auto px-6 lg:px-8 relative z-20">
+        {/* Enhanced Header Section */}
+        <div className="text-center mb-12 md:mb-16 lg:mb-20 space-y-4 md:space-y-6 lg:space-y-8">
+          <div className="inline-block">
+            <h1 className="maharlika-font text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl text-canvas-brown tracking-tight relative px-4">
+              Our Gallery
+              <div className="absolute -bottom-2 md:-bottom-3 left-1/2 transform -translate-x-1/2 w-16 md:w-24 h-1 bg-gradient-to-r from-canvas-pink via-canvas-brown to-canvas-pink rounded-full"></div>
+            </h1>
           </div>
           
-          <p className="tenor-font text-lg text-canvas-black max-w-2xl mx-auto leading-relaxed">
+          <div className="flex items-center justify-center space-x-3 md:space-x-4 lg:space-x-6 px-4">
+            <div className="h-[2px] w-8 md:w-12 lg:w-16 bg-gradient-to-r from-transparent via-canvas-pink to-canvas-brown rounded-full"></div>
+            <h3 className="breathing-font text-lg sm:text-xl md:text-2xl lg:text-3xl text-canvas-black font-light">
+              Artistry in Every Detail
+            </h3>
+            <div className="h-[2px] w-8 md:w-12 lg:w-16 bg-gradient-to-l from-transparent via-canvas-pink to-canvas-brown rounded-full"></div>
+          </div>
+          
+          <p className="tenor-font text-sm sm:text-base md:text-lg lg:text-xl text-canvas-black/80 max-w-3xl mx-auto leading-relaxed px-6">
             Explore our portfolio of stunning nail designs, from classic elegance to bold artistic expressions. 
             Each set tells a unique story of creativity and craftsmanship.
           </p>
         </div>
 
-        {/* Category Filter */}
-        <div className="bg-canvas-white rounded-2xl sleek-shadow p-6 mb-12 max-w-4xl mx-auto">
-          <div className="flex flex-wrap justify-center gap-4">
+        {/* Modern Category Filter */}
+        <div className="bg-white/80 backdrop-blur-md rounded-2xl md:rounded-3xl sleek-shadow p-4 md:p-6 lg:p-8 mb-12 md:mb-16 max-w-5xl mx-auto border border-white/50">
+          <div className="flex flex-wrap justify-center gap-2 md:gap-3">
             {categories.map((category) => (
               <button
                 key={category.id}
@@ -271,51 +268,76 @@ const Gallery = () => {
                   setSelectedCategory(category.id);
                   setIsAutoScrolling(true);
                 }}
-                className={`px-6 py-3 rounded-full font-medium transition-all duration-300 hover-lift ${
+                className={`group relative px-4 md:px-6 lg:px-7 py-2.5 md:py-3 lg:py-3.5 rounded-full font-medium transition-all duration-500 overflow-hidden text-sm md:text-base ${
                   selectedCategory === category.id
-                    ? 'bg-canvas-pink text-white shadow-lg'
-                    : 'bg-canvas-pink/10 text-canvas-brown hover:bg-canvas-pink/20'
+                    ? 'bg-canvas-pink text-white shadow-xl shadow-canvas-pink/30 scale-105'
+                    : 'bg-white/70 text-canvas-brown hover:bg-white hover:shadow-lg hover:scale-105'
                 }`}
               >
-                <span className="mr-2">{category.icon}</span>
-                <span className="tenor-font">{category.name}</span>
+                <span className="relative z-10 flex items-center space-x-1.5 md:space-x-2">
+                  <span className="text-base md:text-lg">{category.icon}</span>
+                  <span className="tenor-font hidden sm:inline">{category.name}</span>
+                  <span className="tenor-font sm:hidden">{category.name.split(' ')[0]}</span>
+                </span>
+                {selectedCategory !== category.id && (
+                  <div className="absolute inset-0 bg-gradient-to-r from-canvas-pink/10 to-canvas-brown/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                )}
               </button>
             ))}
           </div>
         </div>
 
-        {/* Carousel Container */}
+        {/* Enhanced Carousel Container */}
         <div className="relative">
-          {/* Navigation Buttons */}
+          {/* Refined Navigation Buttons */}
           <button
             onClick={scrollLeft}
-            className="absolute left-4 top-1/2 transform -translate-y-1/2 z-20 w-14 h-14 bg-canvas-white rounded-full flex items-center justify-center shadow-lg hover-lift transition-all duration-300 hover:bg-canvas-pink hover:text-white"
+            className="hidden md:flex absolute left-2 lg:left-4 top-1/2 transform -translate-y-1/2 z-30 w-12 h-12 lg:w-16 lg:h-16 bg-white/90 backdrop-blur-md rounded-full items-center justify-center shadow-2xl hover:shadow-canvas-pink/30 transition-all duration-500 hover:scale-110 hover:bg-canvas-pink hover:text-white group border border-white/50"
+            aria-label="Scroll left"
           >
-            <span className="text-2xl">←</span>
+            <svg className="w-5 h-5 lg:w-6 lg:h-6 transition-transform duration-300 group-hover:-translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M15 19l-7-7 7-7" />
+            </svg>
           </button>
           
           <button
             onClick={scrollRight}
-            className="absolute right-4 top-1/2 transform -translate-y-1/2 z-20 w-14 h-14 bg-canvas-white rounded-full flex items-center justify-center shadow-lg hover-lift transition-all duration-300 hover:bg-canvas-pink hover:text-white"
+            className="hidden md:flex absolute right-2 lg:right-4 top-1/2 transform -translate-y-1/2 z-30 w-12 h-12 lg:w-16 lg:h-16 bg-white/90 backdrop-blur-md rounded-full items-center justify-center shadow-2xl hover:shadow-canvas-pink/30 transition-all duration-500 hover:scale-110 hover:bg-canvas-pink hover:text-white group border border-white/50"
+            aria-label="Scroll right"
           >
-            <span className="text-2xl">→</span>
+            <svg className="w-5 h-5 lg:w-6 lg:h-6 transition-transform duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 5l7 7-7 7" />
+            </svg>
           </button>
 
-          {/* Auto-scroll indicator */}
-          <div className="absolute top-4 right-4 z-20">
-            <div className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${
+          {/* Auto-scroll indicator with animation */}
+          <div className="absolute top-0 right-2 md:right-4 z-30">
+            <div className={`px-3 md:px-5 py-2 md:py-2.5 rounded-full text-xs md:text-sm font-medium transition-all duration-500 backdrop-blur-md border ${
               isAutoScrolling 
-                ? 'bg-canvas-pink/20 text-canvas-brown border border-canvas-pink/30' 
-                : 'bg-canvas-white/90 text-canvas-black border border-gray-200'
+                ? 'bg-canvas-pink/20 text-canvas-brown border-canvas-pink/40 shadow-lg' 
+                : 'bg-white/80 text-canvas-black/70 border-white/50'
             }`}>
-              {isAutoScrolling ? '▶ Auto-scrolling' : '⏸ Paused'}
+              <span className="flex items-center space-x-2">
+                {isAutoScrolling ? (
+                  <>
+                    <span className="inline-block w-1.5 h-1.5 md:w-2 md:h-2 bg-canvas-pink rounded-full animate-pulse"></span>
+                    <span className="hidden sm:inline">Auto-scrolling</span>
+                    <span className="sm:hidden">Auto</span>
+                  </>
+                ) : (
+                  <>
+                    <span className="inline-block w-1.5 h-1.5 md:w-2 md:h-2 bg-gray-400 rounded-full"></span>
+                    <span>Paused</span>
+                  </>
+                )}
+              </span>
             </div>
           </div>
 
-          {/* Carousel Track */}
+          {/* Enhanced Carousel Track */}
           <div 
             ref={carouselRef}
-            className="flex overflow-x-hidden scroll-smooth gap-6 py-4"
+            className="flex overflow-x-scroll md:overflow-x-hidden scroll-smooth gap-4 md:gap-6 lg:gap-8 py-4 md:py-6 px-4 md:px-2 snap-x snap-mandatory md:snap-none"
             onMouseEnter={handleMouseEnter}
             onMouseLeave={handleMouseLeave}
             style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
@@ -323,18 +345,18 @@ const Gallery = () => {
             {infiniteImages.map((item, index) => (
               <div
                 key={`${item.id}-${index}`}
-                className="flex-shrink-0 w-80 h-96 relative group cursor-pointer"
+                className="flex-shrink-0 w-[85vw] sm:w-[70vw] md:w-[340px] h-[480px] sm:h-[520px] md:h-[440px] relative group cursor-pointer snap-center"
                 onMouseEnter={() => setHoveredImage(`${item.id}-${index}`)}
                 onMouseLeave={() => setHoveredImage(null)}
               >
-                {/* Image Container */}
-                <div className="relative w-full h-full rounded-2xl overflow-hidden bg-canvas-white sleek-shadow">
+                {/* Modern Card Container */}
+                <div className="relative w-full h-full rounded-2xl md:rounded-3xl overflow-hidden bg-white shadow-2xl transition-all duration-700 group-hover:shadow-canvas-pink/30 group-hover:shadow-3xl">
                   <img
                     src={item.image}
                     alt={item.title}
                     className={`w-full h-full object-cover transition-all duration-700 ${
                       hoveredImage === `${item.id}-${index}`
-                        ? 'scale-110 brightness-110' 
+                        ? 'scale-110 brightness-105' 
                         : 'scale-100'
                     }`}
                     onError={(e) => {
@@ -344,90 +366,101 @@ const Gallery = () => {
                     }}
                   />
                   
-                  {/* Overlay Gradient */}
-                  <div className={`absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent transition-all duration-500 ${
-                    hoveredImage === `${item.id}-${index}` ? 'opacity-100' : 'opacity-0'
+                  {/* Enhanced Overlay Gradient - Always visible on mobile */}
+                  <div className={`absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent transition-all duration-700 ${
+                    hoveredImage === `${item.id}-${index}` ? 'opacity-100' : 'md:opacity-0 opacity-100'
                   }`} />
                   
-                  {/* Content Overlay */}
-                  <div className={`absolute inset-0 p-6 flex flex-col justify-end transition-all duration-500 ${
+                  {/* Enhanced Content Overlay - Always visible on mobile */}
+                  <div className={`absolute inset-0 p-6 md:p-8 flex flex-col justify-end transition-all duration-700 ${
                     hoveredImage === `${item.id}-${index}`
                       ? 'translate-y-0 opacity-100' 
-                      : 'translate-y-4 opacity-0'
+                      : 'md:translate-y-8 md:opacity-0 translate-y-0 opacity-100'
                   }`}>
-                    <div className="text-white space-y-2">
-                      <h3 className="breathing-font text-xl font-semibold">
-                        {item.title}
-                      </h3>
-                      <p className="tenor-font text-sm text-white/90">
-                        {item.description}
-                      </p>
-                      
-                      {/* Category Badge */}
-                      <div className="inline-block">
-                        <span className="bg-canvas-pink px-3 py-1 rounded-full text-xs font-medium text-white">
+                    <div className="text-white space-y-2 md:space-y-3">
+                      <div className="inline-block mb-1 md:mb-2">
+                        <span className="bg-white/20 backdrop-blur-sm px-3 md:px-4 py-1 md:py-1.5 rounded-full text-xs font-medium text-white border border-white/30">
                           {categories.find(cat => cat.id === item.category)?.name}
                         </span>
                       </div>
+                      
+                      <h3 className="breathing-font text-xl md:text-2xl font-semibold leading-tight">
+                        {item.title}
+                      </h3>
+                      
+                      <p className="tenor-font text-sm text-white/90 leading-relaxed">
+                        {item.description}
+                      </p>
                     </div>
                   </div>
 
-                  {/* Hover Border Effect */}
-                  <div className={`absolute inset-0 border-2 border-canvas-pink rounded-2xl transition-all duration-300 ${
+                  {/* Refined Hover Border Effect */}
+                  <div className={`absolute inset-0 border-[3px] border-canvas-pink rounded-2xl md:rounded-3xl transition-all duration-500 ${
                     hoveredImage === `${item.id}-${index}` ? 'opacity-100 scale-100' : 'opacity-0 scale-95'
                   }`} />
                 </div>
 
-                {/* Floating Action Button */}
-                <div className={`absolute top-4 right-4 w-12 h-12 bg-canvas-white rounded-full flex items-center justify-center shadow-lg transition-all duration-300 ${
+                {/* Floating Action Icon - Hidden on mobile */}
+                <div className={`hidden md:flex absolute top-6 right-6 w-14 h-14 bg-white/95 backdrop-blur-md rounded-2xl items-center justify-center shadow-xl transition-all duration-500 border border-white/50 ${
                   hoveredImage === `${item.id}-${index}`
-                    ? 'scale-100 opacity-100' 
-                    : 'scale-75 opacity-0'
+                    ? 'scale-100 opacity-100 rotate-0' 
+                    : 'scale-75 opacity-0 rotate-45'
                 }`}>
-                  <span className="text-canvas-pink text-xl">🔍</span>
+                  <svg className="w-6 h-6 text-canvas-pink" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7" />
+                  </svg>
                 </div>
               </div>
             ))}
           </div>
 
-          {/* Gradient Fade Edges */}
-          <div className="absolute inset-y-0 left-0 w-20 bg-gradient-to-r from-white via-white/80 to-transparent pointer-events-none z-10"></div>
-          <div className="absolute inset-y-0 right-0 w-20 bg-gradient-to-l from-white via-white/80 to-transparent pointer-events-none z-10"></div>
+          {/* Enhanced Gradient Fade Edges - Hidden on mobile */}
+          <div className="hidden md:block absolute inset-y-0 left-0 w-32 bg-gradient-to-r from-white via-white/60 to-transparent pointer-events-none z-20"></div>
+          <div className="hidden md:block absolute inset-y-0 right-0 w-32 bg-gradient-to-l from-white via-white/60 to-transparent pointer-events-none z-20"></div>
         </div>
 
-        {/* Call to Action Section */}
-        <div className="text-center mt-20">
-          <div className="bg-canvas-white rounded-3xl sleek-shadow p-12 max-w-4xl mx-auto relative overflow-hidden">
-            {/* Decorative elements */}
-            <div className="absolute top-0 right-0 w-32 h-32 bg-canvas-pink/5 rounded-full blur-2xl"></div>
-            <div className="absolute bottom-0 left-0 w-24 h-24 bg-canvas-brown/5 rounded-full blur-xl"></div>
+        {/* Enhanced Call to Action Section */}
+        <div className="text-center mt-16 md:mt-20 lg:mt-24 px-4">
+          <div className="bg-white/80 backdrop-blur-md rounded-3xl md:rounded-[2.5rem] sleek-shadow p-8 md:p-12 lg:p-14 max-w-5xl mx-auto relative overflow-hidden border border-white/50">
+            {/* Animated decorative elements */}
+            <div className="absolute top-0 right-0 w-48 md:w-64 h-48 md:h-64 bg-canvas-pink/10 rounded-full blur-3xl animate-pulse"></div>
+            <div className="absolute bottom-0 left-0 w-32 md:w-48 h-32 md:h-48 bg-canvas-brown/10 rounded-full blur-2xl animate-pulse" style={{ animationDelay: '1.5s' }}></div>
             
-            <div className="relative z-10 space-y-6">
-              <h2 className="maharlika-font text-4xl lg:text-5xl text-canvas-brown">
+            <div className="relative z-10 space-y-6 md:space-y-8">
+              <h2 className="maharlika-font text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-canvas-brown tracking-tight leading-tight">
                 Ready to Create Your Masterpiece?
               </h2>
-              <p className="tenor-font text-lg text-canvas-black max-w-2xl mx-auto">
+              
+              <p className="tenor-font text-base md:text-lg lg:text-xl text-canvas-black/80 max-w-3xl mx-auto leading-relaxed">
                 Let's bring your nail art vision to life. Book your appointment today and experience 
                 the artistry that sets us apart from the rest.
               </p>
               
-              <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4">
-                <button className="bg-canvas-pink px-8 py-4 rounded-full font-semibold text-white text-lg hover-lift">
-                  <a
+              <div className="flex flex-col sm:flex-row gap-4 md:gap-5 justify-center pt-4 md:pt-6">
+                <a
                   href='https://booksy.com/en-us/774723_the-nail-canvas_nail-salon_16218_savannah?do=invite&utm_medium=merchant_customer_invite'
                   target='_blank'
-                  >
-                  View Pricing
-                  </a>
-                </button>
+                  rel="noopener noreferrer"
+                  className="group relative inline-flex items-center justify-center"
+                >
+                  <div className="absolute inset-0 bg-gradient-to-r from-canvas-pink to-canvas-brown rounded-full blur-lg opacity-75 group-hover:opacity-100 transition-opacity duration-500"></div>
+                  <button className="relative bg-gradient-to-r from-canvas-pink to-canvas-brown px-8 md:px-10 py-4 md:py-5 rounded-full font-semibold text-white text-base md:text-lg shadow-xl hover:shadow-2xl transition-all duration-500 hover:scale-105 w-full sm:w-auto">
+                    <span className="flex items-center justify-center space-x-2">
+                      <span>View Pricing</span>
+                      <svg className="w-4 h-4 md:w-5 md:h-5 transition-transform duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                      </svg>
+                    </span>
+                  </button>
+                </a>
               </div>
             </div>
           </div>
         </div>
       </div>
 
-      {/* Bottom decorative element */}
-      <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-px h-16 bg-gradient-to-b from-canvas-pink/50 to-transparent"></div>
+      {/* Refined bottom decorative element */}
+      <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-1 h-20 bg-gradient-to-b from-canvas-pink/60 via-canvas-brown/40 to-transparent rounded-full"></div>
     </section>
   );
 };

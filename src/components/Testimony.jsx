@@ -12,52 +12,36 @@ const Testimony = () => {
   const testimonyData = [
     {
       id: 1,
-      name: "Sarah Martinez",
-      location: "Downtown Miami",
+      name: "Marcia P.",
+      location: "Savannah, GA",
       rating: 5,
-      text: "The Nail Canvas is absolutely incredible! Every detail is perfect, from the relaxing atmosphere to the stunning nail art. I've never felt more pampered in my life. The attention to detail is unmatched!",
+      text: "Let this initial review serve as my status over the last 5+ years with The Nail Canvas, This technician is top tier. She is forever evolving and strengthening her craft. Whatever I envision, she recreates or we collab well on. Very professional and has a genuine concern for my nail health and quality. I absolutely love The Nail Canvas",
       service: "Luxury Manicure & Custom Art"
     },
     {
       id: 2,
-      name: "Jessica Thompson",
-      location: "Coral Gables",
+      name: "Felicia S",
+      location: "Savannah, GA",
       rating: 5,
-      text: "I'm obsessed with my gel extensions! The nail tech truly is an artist. The quality is exceptional and my nails have never looked better. This place is pure luxury from start to finish.",
+      text: "Ms. Melant is AWESOME!!! She is professional, courteous and very knowledgable about her productions and profession. As long as I reside in Savannah, she will always be my nail tech. If you have not booked her, I strongly recommend that you do.",
       service: "Gel Extensions"
     },
     {
       id: 3,
-      name: "Maria Rodriguez",
-      location: "Brickell",
+      name: "Tatiana",
+      location: "Albany, GA",
       rating: 5,
-      text: "Best nail salon experience I've ever had! The custom nail art exceeded my expectations. It's clear they care about every single client. I'm a customer for life!",
-      service: "Custom Nail Art"
+      text: "Melant is truly talented technician. She takes her time and pays close attention to detail. She's knowledgeable and professional and most importantnly hygienic. The space is lovely and I had an overall enjoyable experience 10/10 would highly recommend.",
+      service: "Basic Pedicure with Regular Polish"
     },
     {
       id: 4,
-      name: "Ashley Chen",
-      location: "South Beach",
+      name: "Shawna",
+      location: "Atlanta, GA",
       rating: 5,
-      text: "The spa pedicure was heavenly! Such a peaceful, luxurious environment. The results speak for themselves - my nails look like art pieces. Absolutely worth every penny!",
-      service: "Spa Pedicure"
+      text: "Always leaving more than satisfied when I leave. I have been coming faithfully for about 5 month and I won't let anyone else touch my nails. Melany is so genuine and she will take care of you",
+      service: "Short Fiil"
     },
-    {
-      id: 5,
-      name: "Nicole Williams",
-      location: "Aventura",
-      rating: 5,
-      text: "Professional, clean, and absolutely gorgeous results every time. The Nail Canvas has ruined me for other salons - nothing compares to this level of artistry and care.",
-      service: "Luxury Manicure"
-    },
-    {
-      id: 6,
-      name: "Isabella Garcia",
-      location: "Wynwood",
-      rating: 5,
-      text: "I drive 45 minutes just to come here because it's THAT good. The nail tech is incredibly talented and the space is so serene. My nails are always flawless!",
-      service: "Custom Design"
-    }
   ];
 
   const changeTestimonial = useCallback((newIndex) => {
